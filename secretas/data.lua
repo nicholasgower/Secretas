@@ -9,7 +9,7 @@ require("__secretas__.prototypes.entity.asteroid")
 --require("__secretas__.prototypes.recipe-category")
 require("__secretas__.prototypes.recipe")
 require("__secretas__.prototypes.entity.remnants")
---require("__secretas__.prototypes.technology")
+require("__secretas__.prototypes.technology")
 
 require("__secretas__.prototypes.entity.resources")
 require("__secretas__.prototypes.planet.frozeta-map-gen")

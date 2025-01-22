@@ -22,6 +22,7 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
         max_health = 150,
         corpse = "hyper-inserter-remnants",
         dying_explosion = "fast-inserter-explosion",
+        stack_size_bonus = 16,
         resistances =
         {
           {
@@ -34,17 +35,17 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
         damaged_trigger_effect = hit_effects.entity(),
         pickup_position = {0, -1},
         insert_position = {0, 1.2},
-        energy_per_movement = "20kJ",
-        energy_per_rotation = "20kJ",
-        heating_energy = "50kW",
+        energy_per_movement = "25kJ",
+        energy_per_rotation = "25kJ",
+        heating_energy = "0kW",
         energy_source =
         {
           type = "electric",
           usage_priority = "secondary-input",
           drain = "0.5kW"
         },
-        extension_speed = 0.1,
-        rotation_speed = 0.04,
+        extension_speed = 0.2,
+        rotation_speed = 0.08,
         filter_count = 5,
         icon_draw_specification = {scale = 0.5},
         fast_replaceable_group = "inserter",
@@ -157,5 +158,5 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
         circuit_wire_max_distance = inserter_circuit_wire_max_distance,
         default_stack_control_input_signal = inserter_default_stack_control_input_signal
     },
-
+    
 })

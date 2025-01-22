@@ -5,7 +5,7 @@ data:extend{
   {
     type = "noise-expression",
     name = "frozeta_ore_spacing",
-    expression = 128
+    expression = 100
   },
   {
     type = "noise-expression",

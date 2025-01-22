@@ -13,7 +13,7 @@ asteroid_functions.gleba_ratio       = {2, 5, 1 , 0, 0}
 asteroid_functions.fulgora_ratio     = {4, 3, 1 , 0, 0}
 asteroid_functions.aquilo_ratio      = {1, 2, 20, 0, 0}
 asteroid_functions.system_edge_ratio = {3, 5, 2 , 0, 0}
-asteroid_functions.secretas_ratio =   {2,4,10,0,1}
+asteroid_functions.secretas_ratio =    {2, 4 ,10 ,0, 6}
 
 asteroid_functions.nauvis_chunks      = 0.0125
 asteroid_functions.vulcanus_chunks    = 0.0020
@@ -241,10 +241,10 @@ asteroid_functions.aquilo_secretas =
     {position = 0.2, ratios = {2,3,10, 0,0}},
     {position = 0.3, ratios = {4,2,8, 0,0}},
     {position = 0.4, ratios = {6,1,4, 0,0}},
-    {position = 0.5, ratios = {9,4,3, 0,0}},
-    {position = 0.6, ratios = {9,5,2, 0,0}},
-    {position = 0.7, ratios = {9,2,7, 0, 0}},
-    {position = 0.8, ratios = {3,5,1, 0, 1}},
+    {position = 0.5, ratios = {9,4,3, 0, 0}},
+    {position = 0.6, ratios = {9,5,2, 0, 1}},
+    {position = 0.7, ratios = {9,2,7, 0, 2}},
+    {position = 0.8, ratios = {3,5,1, 0, 4}},
     {position = 0.9, ratios = asteroid_functions.secretas_ratio},
   }
 }

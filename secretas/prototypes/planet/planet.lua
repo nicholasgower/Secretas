@@ -18,9 +18,9 @@ data:extend(
         subgroup = "planets",
         gravity_pull = 10,
         distance = 45,
-        orientation = 0.1,
-        magnitude = 2.0,
-        label_orientation = 0.15,
+        orientation = 0.18,
+        magnitude = 3.0,
+        label_orientation = 0.0,
         asteroid_spawn_influence = 1,
         auto_save_on_first_trip = true,
         asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.aquilo_solar_system_edge, 0.9) --TODO define golden asteroids
@@ -32,8 +32,8 @@ data:extend(
         starmap_icon = "__secretas__/graphics/planet/starmap-frozeta.png",
         starmap_icon_size = 512,
         gravity_pull = 10,
-        distance = 40,
-        orientation = 0.15,
+        distance = 44,
+        orientation = 0.20,
         magnitude = 0.8,
         label_orientation = 0.15,
         order = "f[frozeta]",
@@ -151,5 +151,16 @@ data:extend(
         length = 20000,
         asteroid_spawn_definitions = space_age_asteroid_util.spawn_definitions(space_age_asteroid_util.aquilo_solar_system_edge) --Not sure why mine leads to an index error
     },
+    {
+      type = "space-connection",
+      name = "secretas-frozeta",
+      subgroup = "planet-connections",
+      from = "secretas",
+      to = "frozeta",
+      order = "o",
+      length = 10000,
+      asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.aquilo_secretas)
+    },
+
 }
 )

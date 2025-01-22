@@ -42,7 +42,7 @@ planet_map_gen.frozeta = function() --TODO add all my decorations.
               ["snow-patchy"] = {},
               ["ice-rough"] = {},
               ["ice-smooth"] = {},
-              ["brash-ice"] = {},
+              --["brash-ice"] = {},
             }
           },
           ["decorative"] =
@@ -64,7 +64,7 @@ planet_map_gen.frozeta = function() --TODO add all my decorations.
             {
              
               ["spaceship-scrap"] = {},
-              ["crater-cliff"] = {},
+              --["crater-cliff"] = {},
 
             }
           }
