@@ -97,14 +97,117 @@ data:extend({
           time = 60
         }
     },
+    {
+      type = "technology",
+      name = "steam-recycler",
+      icon_size = 256,
+      icons = util.technology_icon_constant_recipe_productivity("__secretas__/graphics/technology/recycling.png"),
+      essential = true,
+      effects =
+      {
+          {
+              type = "unlock-recipe",
+              recipe = "steam-recycler"
+          },
+      },
+      research_trigger =
+      {
+          type = "mine-entity",
+          entity = "spaceship-scrap"
+      },
+      prerequisites = { "planet-discovery-secretas"}
+    },
 
 
-    --INFINITE
+    --EMPOWER
+    {
+      type = "technology",
+      name = "module-finale",
+      icons = util.technology_icon_constant_recipe_productivity("__secretas__/graphics/technology/module.png"),
+      icon_size = 256,
+      prerequisites = {"planet-discovery-secretas"},
+      effects =
+      {
+          {
+              type = "unlock-recipe",
+              recipe = "quality-module-4",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "productivity-module-4",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "efficiency-module-4",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "speed-module-4",
+          },
+      },
+      unit =
+      {
+        count = 7500,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1}
+        },
+        time = 60
+      }
+    },
+
+    {
+      type = "technology",
+      name = "transport-belt-capacity-3",
+      localised_description = {"technology-description.belt-capacity"},
+      icons = util.technology_icon_constant_stack_size("__space-age__/graphics/technology/transport-belt-capacity.png"),
+      effects =
+      {
+        {
+          type = "belt-stack-size-bonus",
+          modifier = 1
+        },
+
+      },
+      prerequisites = {"transport-belt-capacity-2","planet-discovery-secretas"},
+      unit =
+      {
+        count = 6000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1}
+        },
+        time = 60
+      },
+      upgrade = true
+    },
+
+    --INFINITE-ISH
 
     {
       type = "technology",
       name = "spaceship-scrap-recycling-productivity",
-      icons = util.technology_icon_constant_recipe_productivity("__space-age__/graphics/technology/scrap-recycling-productivity.png"),
+      icons = util.technology_icon_constant_recipe_productivity("__secretas__/graphics/technology/scrap-recycling-productivity.png"),
       icon_size = 256,
       effects =
       {
@@ -138,7 +241,7 @@ data:extend({
     {
       type = "technology",
       name = "science-pack-productivity",
-      icon = "__space-age__/graphics/technology/research-productivity.png",
+      icons = util.technology_icon_constant_recipe_productivity("__space-age__/graphics/technology/research-productivity.png"),
       icon_size = 256,
       icon_size = 256,
       effects =
@@ -201,7 +304,7 @@ data:extend({
         {
           type = "change-recipe-productivity",
           recipe = "golden-science-pack",
-          change = 0.01
+          change = 0.005
         },
         {
           type = "change-recipe-productivity",

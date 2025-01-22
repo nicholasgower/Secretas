@@ -47,10 +47,10 @@ data:extend(
           {type = "item", name = "supercapacitor",          amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "tungsten-plate",          amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "carbon-fiber",            amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "solar-panel",            amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "solar-panel",            amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "space-platform-foundation", amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "boiler",                  amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "depleted-uranium-fuel-cell",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "depleted-uranium-fuel-cell",   amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           --10
           {type = "item", name = "holmium-plate",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "spoilage",   amount = 1, probability = 0.06, show_details_in_recipe_tooltip = false},
@@ -137,11 +137,12 @@ data:extend(
       energy_required = 2,
       results =
       {
-        {type = "item", name = "gold-ore", amount = 15},
+        {type = "item", name = "gold-ore", amount = 10},
         {type = "item", name = "auric-asteroid-chunk", amount = 1, probability = 0.1}
       },
       allow_productivity = true,
-      allow_decomposition = false
+      allow_decomposition = false,
+      allow_quality = true,
     },
     {
       type ="recipe",
@@ -181,7 +182,7 @@ data:extend(
         {type ="item", name ="low-density-structure", amount = 2},
         {type ="item", name ="advanced-circuit", amount = 1},
         {type ="item", name ="stack-inserter", amount = 1},
-        {type ="item", name ="nuclear-fuel", amount = 1},
+        {type ="item", name ="uranium-fuel-cell", amount = 1},
       },
 
       energy_required = 4,
@@ -193,6 +194,153 @@ data:extend(
       allow_productivity = false,
       allow_quality = true,
       main_product ="hyper-inserter",
+    },
+    {
+      type ="recipe",
+      name ="steam-recycler",
+      category ="crafting",
+      icon ="__secretas__/graphics/icons/hyper-inserter.png",
+      enabled = false,
+      ingredients =
+      {
+        {type ="item", name ="processing-unit", amount = 6},
+        {type ="item", name ="steel-plate", amount = 20},
+        {type ="item", name ="iron-gear-wheel", amount = 40},
+        {type ="item", name ="concrete", amount = 20},
+        {type ="item", name ="copper-plate", amount = 50},
+        {type ="item", name ="pipe", amount = 20},
+        {type ="item", name ="iron-plate", amount = 10},
+      },
+
+      energy_required = 5,
+      results =
+      {
+        {type ="item", name ="steam-recycler", amount = 1},
+
+      },
+      allow_productivity = false,
+      allow_quality = true,
+      main_product ="steam-recycler",
+    },
+    {
+      type ="recipe",
+      name ="golden-egg",
+      category ="crafting",
+      icon ="__secretas__/graphics/icons/golden-biter-egg.png",
+      enabled = false,
+      ingredients =
+      {
+        {type ="item", name ="biter-egg", amount = 1},
+        {type ="item", name ="jelly", amount = 10},
+        {type ="item", name ="gold-plate", amount = 2},
+      },
+
+      energy_required = 5,
+      results =
+      {
+        {type ="item", name ="golden-biter-egg", amount = 1},
+
+      },
+      allow_productivity = true,
+      allow_quality = true,
+      main_product ="golden-biter-egg",
+      maximum_productivity = 2,
+    },
+    {
+      type ="recipe",
+      name ="quality-module-4",
+      category ="electronics",
+      icon ="__secretas__/graphics/icons/quality-module-4.png",
+      enabled = false,
+      ingredients =
+      {
+        {type ="item", name ="quality-module-3", amount = 4},
+        {type ="item", name ="processing-unit", amount = 5},
+        {type ="item", name ="advanced-circuit", amount = 5},
+        {type ="item", name ="gold-plate", amount = 4},
+        {type ="item", name ="supercapacitor", amount = 1},
+      },
+
+      energy_required = 120,
+      results =
+      {
+        {type ="item", name ="quality-module-4", amount = 1},
+
+      },
+      allow_quality = true,
+      main_product ="quality-module-4",
+    },
+    {
+      type ="recipe",
+      name ="efficiency-module-4",
+      category ="electronics",
+      icon ="__secretas__/graphics/icons/efficiency-module-4.png",
+      enabled = false,
+      ingredients =
+      {
+        {type ="item", name ="efficiency-module-3", amount = 4},
+        {type ="item", name ="processing-unit", amount = 5},
+        {type ="item", name ="advanced-circuit", amount = 5},
+        {type ="item", name ="gold-plate", amount = 4},
+        {type ="item", name ="bioflux", amount = 1},
+      },
+
+      energy_required = 120,
+      results =
+      {
+        {type ="item", name ="efficiency-module-4", amount = 1},
+
+      },
+      allow_quality = true,
+      main_product ="efficiency-module-4",
+    },
+    {
+      type ="recipe",
+      name ="productivity-module-4",
+      category ="electronics",
+      icon ="__secretas__/graphics/icons/productivity-module-4.png",
+      enabled = false,
+      ingredients =
+      {
+        {type ="item", name ="productivity-module-3", amount = 4},
+        {type ="item", name ="processing-unit", amount = 5},
+        {type ="item", name ="advanced-circuit", amount = 5},
+        {type ="item", name ="gold-plate", amount = 4},
+        {type ="item", name ="golden-biter-egg", amount = 1},
+      },
+
+      energy_required = 120,
+      results =
+      {
+        {type ="item", name ="productivity-module-4", amount = 1},
+
+      },
+      allow_quality = true,
+      main_product ="productivity-module-4",
+    },
+    {
+      type ="recipe",
+      name ="speed-module-4",
+      category ="electronics",
+      icon ="__secretas__/graphics/icons/speed-module-4.png",
+      enabled = false,
+      ingredients =
+      {
+        {type ="item", name ="speed-module-3", amount = 4},
+        {type ="item", name ="processing-unit", amount = 5},
+        {type ="item", name ="advanced-circuit", amount = 5},
+        {type ="item", name ="gold-plate", amount = 4},
+        {type ="item", name ="tungsten-plate", amount = 5},
+      },
+
+      energy_required = 120,
+      results =
+      {
+        {type ="item", name ="speed-module-4", amount = 1},
+
+      },
+      allow_quality = true,
+      main_product ="speed-module-4",
     },
 
 })

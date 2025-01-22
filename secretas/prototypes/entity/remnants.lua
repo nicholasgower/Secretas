@@ -63,6 +63,33 @@ local remnants =
       scale = 0.5
     })
   },
+  {
+    type = "corpse",
+    name = "steam-recycler-remnants",
+    icon = "__secretas__/graphics/icons/steam-recycler.png",
+    flags = {"placeable-neutral", "not-on-map"},
+    hidden_in_factoriopedia = true,
+    subgroup = "smelting-machine-remnants",
+    order = "e[steamrecycler]",
+    selection_box = {{-1, -2}, {1, 2}},
+    tile_width = 2,
+    tile_height = 4,
+    selectable_in_game = false,
+    time_before_removed = 60 * 60 * 15, -- 15 minutes
+    expires = false,
+    final_render_layer = "remnants",
+    remove_on_tile_placement = false,
+    animation = make_rotated_animation_variations_from_sheet (2,
+    {
+      filename = "__secretas__/graphics/entity/recycler/recycler-remnants.png",
+      line_length = 4,
+      width = 384,
+      height = 384,
+      direction_count = 4,
+      shift = util.by_pixel(0, 0),
+      scale = 0.5
+    })
+  }
 }
 
 

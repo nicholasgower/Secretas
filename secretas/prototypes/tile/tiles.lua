@@ -1,5 +1,5 @@
-local sounds = require("prototypes.entity.sounds")
-local tile_trigger_effects = require("prototypes.tile.tile-trigger-effects")
+local sounds = require("__base__/prototypes/entity/sounds")
+local tile_trigger_effects = require("__base__/prototypes/tile/tile-trigger-effects")
 local tile_pollution = require("__base__/prototypes/tile/tile-pollution-values")
 local tile_collision_masks = require("__base__/prototypes/tile/tile-collision-masks")
 
