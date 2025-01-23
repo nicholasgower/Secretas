@@ -40,7 +40,7 @@ data:extend(
         subgroup = "planets",
         map_gen_settings = planet_map_gen.frozeta(), --TODO
         pollutant_type = nil,
-        solar_power_in_space = 60,
+        solar_power_in_space = 30,
         platform_procession_set =
         {
           arrival = {"planet-to-platform-b"},

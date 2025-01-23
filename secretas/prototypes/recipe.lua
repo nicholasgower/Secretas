@@ -199,7 +199,7 @@ data:extend(
       type ="recipe",
       name ="steam-recycler",
       category ="crafting",
-      icon ="__secretas__/graphics/icons/hyper-inserter.png",
+      icon ="__secretas__/graphics/icons/steam-recycler.png",
       enabled = false,
       ingredients =
       {

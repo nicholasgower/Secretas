@@ -1,0 +1,6 @@
+==1.0.1==
+-Fixed incorrect sprite on steam recycler recipe, thanks  cackling.fiend
+-Fixed missing localizations, thanks  cackling.fiend
+-Thinking about how to best approach interned compatibility for mods that add new science so they benefit from the research "Science pack productivity"
+==1.0.0==
+-Release
