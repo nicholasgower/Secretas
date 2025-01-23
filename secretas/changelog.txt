@@ -1,6 +1,22 @@
-==1.0.1==
--Fixed incorrect sprite on steam recycler recipe, thanks  cackling.fiend
--Fixed missing localizations, thanks  cackling.fiend
--Thinking about how to best approach interned compatibility for mods that add new science so they benefit from the research "Science pack productivity"
-==1.0.0==
--Release
+---------------------------------------------------------------------------------------------------
+Version: 1.1.60
+Date: 23. 01. 2025
+  Bugfixes:
+    - Not enough recycler slots to receive all potential scrap outputs. Didn't realize all those slots were necessary at first. Thanks to Semenanr for bringing this to my attention. Steam recycler and vanilla recycler now have 40 output slots, so you can now get all outputs from spaceship scrap!
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 22. 01. 2025
+  Bugfixes:
+    - Fixed incorrect sprite on steam recycler recipe, thanks  cackling.fiend
+    - Fixed missing localizations, thanks  cackling.fiend
+    - Thinking about how to best approach interned compatibility for mods that add new science so they benefit from the research "Science pack productivity"
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 21. 1. 2025
+  Major Features:
+    - Initial release.
+
+
+
+
+

@@ -197,7 +197,7 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
       collision_box = {{-0.7, -1.7}, {0.7, 1.7}},
       selection_box = {{-0.9, -1.85}, {0.9, 1.85}},
       crafting_categories = {"recycling", "recycling-or-hand-crafting"},
-      result_inventory_size = 16,
+      result_inventory_size = 40,
       energy_usage = "600kW",
       crafting_speed = 0.7,
       source_inventory_size = 1,
