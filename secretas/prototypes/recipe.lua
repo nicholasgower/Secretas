@@ -30,17 +30,17 @@ data:extend(
           {type = "item", name = "processing-unit",        amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "advanced-circuit",       amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           {type = "item", name = "low-density-structure",  amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "solid-fuel",             amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "solid-fuel",             amount = 1, probability = 0.09, show_details_in_recipe_tooltip = false},
           {type = "item", name = "steel-plate",            amount = 1, probability = 0.04, show_details_in_recipe_tooltip = false},
           --11
-          {type = "item", name = "battery",                amount = 1, probability = 0.04, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "ice",                    amount = 1, probability = 0.06, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "battery",                amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "ice",                    amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
           --10
-          {type = "item", name = "iron-gear-wheel",        amount = 1, probability = 0.15, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "iron-gear-wheel",        amount = 1, probability = 0.13, show_details_in_recipe_tooltip = false},
           --15
           {type = "item", name = "copper-cable",           amount = 1, probability = 0.04, show_details_in_recipe_tooltip = false},
           {type = "item", name = "stone",                  amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "electric-engine-unit",   amount = 1, probability = 0.08, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "electric-engine-unit",   amount = 1, probability = 0.06, show_details_in_recipe_tooltip = false},
           --14
           {type = "item", name = "plastic-bar",            amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "lithium-plate",          amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
@@ -342,5 +342,37 @@ data:extend(
       allow_quality = true,
       main_product ="speed-module-4",
     },
+    {
+      type = "recipe",
+      name = "solid-fuel-liquefaction",
+      icons = {
+        {
+          icon = "__base__/graphics/icons/fluid/coal-liquefaction.png",
+        },
+        {
+          icon = "__base__/graphics/icons/solid-fuel.png",
+          scale = 0.2
+        },
 
+      },
+      category = "oil-processing",
+      enabled = false,
+      energy_required = 5,
+      ingredients =
+      {
+        {type = "item", name = "solid-fuel", amount = 5},
+        {type = "fluid", name = "heavy-oil", amount = 50, ignored_by_stats = 50},
+        {type = "fluid", name = "steam", amount = 200}
+      },
+      results =
+      {
+        {type = "fluid", name = "heavy-oil", amount = 120, ignored_by_stats = 50, ignored_by_productivity = 50},
+
+      },
+      allow_productivity = true,
+
+      subgroup = "fluid-recipes",
+      order = "a[oil-processing]-c[solid-fuel-liquefaction]",
+      allow_decomposition = false
+    },
 })

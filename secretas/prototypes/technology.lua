@@ -40,6 +40,10 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "golden-science-pack"
             },
+            {
+              type = "unlock-recipe",
+              recipe = "solid-fuel-liquefaction"
+            },
 
         },
         prerequisites = {"planet-discovery-aquilo"},

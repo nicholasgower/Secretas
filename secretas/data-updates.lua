@@ -5,3 +5,4 @@ for k,v in pairs(all_lab_types) do
 end
 
 data.raw['furnace']['recycler'].result_inventory_size = 40
+

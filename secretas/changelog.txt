@@ -1,5 +1,12 @@
+
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.60
+Version: 1.0.3
+Date: 25. 01. 2025
+  Major Features:
+    - Rebalanced scrap recycling to relieve pressure on solid fuel.
+    - Added solid fuel liquefaction recipe. Should now be possible to make heavy oil with a seed of heavy oil. Now possible to make rocket fuel. Not having a chain for rocket fuel production was a fupa on my end. Sorry!
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
 Date: 23. 01. 2025
   Bugfixes:
     - Not enough recycler slots to receive all potential scrap outputs. Didn't realize all those slots were necessary at first. Thanks to Semenanr for bringing this to my attention. Steam recycler and vanilla recycler now have 40 output slots, so you can now get all outputs from spaceship scrap!
