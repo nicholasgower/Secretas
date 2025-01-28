@@ -1,5 +1,10 @@
 
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 28. 01. 2025
+  Major Features:
+    - data-updates.lua now modified science-pack-productivity technology. It adds all science packs available as both an input requirement, and a change-recipe-productivity effect. This means no matter how many mods add new science, there will always be at least one research that uses all of them. One day, I might figure out settings so you could exclude any other mods science pack. But for now, it works.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.5
 Date: 28. 01. 2025
   Major Features:
