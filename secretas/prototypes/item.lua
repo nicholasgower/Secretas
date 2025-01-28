@@ -201,7 +201,7 @@ data:extend(
     --MODULES 
     {
         type = "module",
-        name = "quality-module-4",
+        name = "quality-module-4-S",
         localised_description = { "item-description.quality-module" },
         icon = "__secretas__/graphics/icons/quality-module-4.png",
         subgroup = "module",
@@ -219,7 +219,7 @@ data:extend(
     },
     {
         type = "module",
-        name = "productivity-module-4",
+        name = "productivity-module-4-S",
         localised_description = { "item-description.productivity-module" },
         icon = "__secretas__/graphics/icons/productivity-module-4.png",
         subgroup = "module",
@@ -237,7 +237,7 @@ data:extend(
     },
     {
         type = "module",
-        name = "speed-module-4",
+        name = "speed-module-4-S",
         localised_description = { "item-description.speed-module" },
         icon = "__secretas__/graphics/icons/speed-module-4.png",
         subgroup = "module",
@@ -262,7 +262,7 @@ data:extend(
     },
     {
         type = "module",
-        name = "efficiency-module-4",
+        name = "efficiency-module-4-S",
         localised_description = { "item-description.efficiency-module" },
         icon = "__secretas__/graphics/icons/efficiency-module-4.png",
         subgroup = "module",

@@ -134,19 +134,19 @@ data:extend({
       {
           {
               type = "unlock-recipe",
-              recipe = "quality-module-4",
+              recipe = "quality-module-4-S",
           },
           {
             type = "unlock-recipe",
-            recipe = "productivity-module-4",
+            recipe = "productivity-module-4-S",
           },
           {
             type = "unlock-recipe",
-            recipe = "efficiency-module-4",
+            recipe = "efficiency-module-4-S",
           },
           {
             type = "unlock-recipe",
-            recipe = "speed-module-4",
+            recipe = "speed-module-4-S",
           },
       },
       unit =

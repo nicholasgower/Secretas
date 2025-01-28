@@ -1,5 +1,11 @@
 
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 28. 01. 2025
+  Major Features:
+    - Achievements for visiting Frozeta, gold production, making level 4 modules, and researching with gold
+    - Migrated level 4 modules to have an S. Ex productivity-module-4 --> productivity-module-4-S . This ensures I play nicely with whoever else adds level 4 modules. I won't change my -S postfix. 
+---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 27. 01. 2025
   Major Features:

@@ -30,15 +30,15 @@ data:extend(
           {type = "item", name = "processing-unit",        amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "advanced-circuit",       amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           {type = "item", name = "low-density-structure",  amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "solid-fuel",             amount = 1, probability = 0.09, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "steel-plate",            amount = 1, probability = 0.04, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "solid-fuel",             amount = 1, probability = 0.07, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "steel-plate",            amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
           --11
           {type = "item", name = "battery",                amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
           {type = "item", name = "ice",                    amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
           --10
           {type = "item", name = "iron-gear-wheel",        amount = 1, probability = 0.13, show_details_in_recipe_tooltip = false},
           --15
-          {type = "item", name = "copper-cable",           amount = 1, probability = 0.04, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "copper-cable",           amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
           {type = "item", name = "stone",                  amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           {type = "item", name = "electric-engine-unit",   amount = 1, probability = 0.06, show_details_in_recipe_tooltip = false},
           --14
@@ -248,7 +248,7 @@ data:extend(
     },
     {
       type ="recipe",
-      name ="quality-module-4",
+      name ="quality-module-4-S",
       category ="electronics",
       icon ="__secretas__/graphics/icons/quality-module-4.png",
       enabled = false,
@@ -264,15 +264,15 @@ data:extend(
       energy_required = 120,
       results =
       {
-        {type ="item", name ="quality-module-4", amount = 1},
+        {type ="item", name ="quality-module-4-S", amount = 1},
 
       },
       allow_quality = true,
-      main_product ="quality-module-4",
+      main_product ="quality-module-4-S",
     },
     {
       type ="recipe",
-      name ="efficiency-module-4",
+      name ="efficiency-module-4-S",
       category ="electronics",
       icon ="__secretas__/graphics/icons/efficiency-module-4.png",
       enabled = false,
@@ -288,15 +288,15 @@ data:extend(
       energy_required = 120,
       results =
       {
-        {type ="item", name ="efficiency-module-4", amount = 1},
+        {type ="item", name ="efficiency-module-4-S", amount = 1},
 
       },
       allow_quality = true,
-      main_product ="efficiency-module-4",
+      main_product ="efficiency-module-4-S",
     },
     {
       type ="recipe",
-      name ="productivity-module-4",
+      name ="productivity-module-4-S",
       category ="electronics",
       icon ="__secretas__/graphics/icons/productivity-module-4.png",
       enabled = false,
@@ -312,15 +312,15 @@ data:extend(
       energy_required = 120,
       results =
       {
-        {type ="item", name ="productivity-module-4", amount = 1},
+        {type ="item", name ="productivity-module-4-S", amount = 1},
 
       },
       allow_quality = true,
-      main_product ="productivity-module-4",
+      main_product ="productivity-module-4-S",
     },
     {
       type ="recipe",
-      name ="speed-module-4",
+      name ="speed-module-4-S",
       category ="electronics",
       icon ="__secretas__/graphics/icons/speed-module-4.png",
       enabled = false,
@@ -336,11 +336,11 @@ data:extend(
       energy_required = 120,
       results =
       {
-        {type ="item", name ="speed-module-4", amount = 1},
+        {type ="item", name ="speed-module-4-S", amount = 1},
 
       },
       allow_quality = true,
-      main_product ="speed-module-4",
+      main_product ="speed-module-4-S",
     },
     {
       type = "recipe",
