@@ -6,6 +6,8 @@ end
 
 data.raw['furnace']['recycler'].result_inventory_size = 40
 
+local do_science_packs = settings.startup["automatically-populate-science-pack-productivity-research"].value
+
 local all_packs = data.raw['tool']
 --log("all_packs=")
 --log(serpent.block(all_packs))
@@ -13,7 +15,7 @@ for k,v in pairs(all_packs) do
     if(v.subgroup == "science-pack") then
         
         
-        if(data.raw["recipe"][v.name] ~= nil and v.name ~= "automation-science-pack" and v.name ~= "logistic-science-pack" and v.name ~= "chemical-science-pack" and v.name ~= "military-science-pack" and v.name ~= "production-science-pack" and v.name ~= "utility-science-pack" and v.name ~= "space-science-pack" and v.name ~= "metallurgic-science-pack"  and v.name ~= "electromagnetic-science-pack"  and v.name ~= "agricultural-science-pack"  and v.name ~= "cryogenic-science-pack"  and v.name ~= "golden-science-pack"  and v.name ~= "promethium-science-pack" ) then
+        if(do_science_packs && data.raw["recipe"][v.name] ~= nil and v.name ~= "automation-science-pack" and v.name ~= "logistic-science-pack" and v.name ~= "chemical-science-pack" and v.name ~= "military-science-pack" and v.name ~= "production-science-pack" and v.name ~= "utility-science-pack" and v.name ~= "space-science-pack" and v.name ~= "metallurgic-science-pack"  and v.name ~= "electromagnetic-science-pack"  and v.name ~= "agricultural-science-pack"  and v.name ~= "cryogenic-science-pack"  and v.name ~= "golden-science-pack"  and v.name ~= "promethium-science-pack" ) then
             local insert_science =         {
                 type = "change-recipe-productivity",
                 recipe = v.name,
