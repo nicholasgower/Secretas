@@ -148,6 +148,10 @@ data:extend({
             type = "unlock-recipe",
             recipe = "speed-module-4-S",
           },
+          {
+            type = "unlock-recipe",
+            recipe = "golden-egg",
+          },
       },
       unit =
       {
