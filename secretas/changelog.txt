@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.9
+Date: 30. 01. 2025
+  Major Features:
+    - France localization. Thanks Fr-Fae.
+    - integrated pull request. Thanks  Atraxi. PR fixes science-pack-productivity research. 
+    - Frontrider generated some images using AI. They are now integrated. Thanks!
+    - Should be able to be integrated into Kryzeth's all planet mod pack.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.8
 Date: 29. 01. 2025
   Major Features:

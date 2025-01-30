@@ -20,7 +20,7 @@ util_scripts.get_all_science_from_all_labs = function ()
 	local all_science = {}
 	for _, lab in pairs(data.raw['lab']) do
 			for __, lab_input in pairs(lab.inputs) do
-					if(not table_contains(all_science, lab_input)) then
+					if(not util_scripts.table_contains(all_science, lab_input)) then
 							table.insert(all_science, lab_input)
 					end
 			end

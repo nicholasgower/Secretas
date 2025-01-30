@@ -7,7 +7,7 @@ if(settings.startup["automatically-populate-science-pack-productivity-research"]
 		--log("**testing science: " .. science_pack)
 		if(not util_scripts.table_contains(data.raw['technology']["science-pack-productivity"].effects, science_pack, "recipe")) then
 			for _, recipe in pairs(data.raw['recipe']) do
-				if(recipe.results and util_scripts.table_contains(recipe.results, science_pack, "name")) then
+				if(recipe.results and util_scripts.table_contains(recipe.results, science_pack, "name") and recipe.category ~= "recycling") then
 					local insert_science = {
 						type = "change-recipe-productivity",
 						recipe = recipe.name,
