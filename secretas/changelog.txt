@@ -1,4 +1,15 @@
-
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+Date: 29. 01. 2025
+  Major Features:
+    - Added localization for achievements.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+Date: 29. 01. 2025
+  Major Features:
+    - Added setting to disable behavior that handles adding all science packs to science-pack-productivity
+    - Golden biter egg recipe now enabled. My bad. Thanks nicklasDohrn for bringing it my attention.
+    - Renamed named transport-belt-capacity-3 to transport-belt-capacity-3_Secretas. I wrote a migration for this but I am not sure why it doesn't work. This should ensure compatibility for infinite belt stacking mod.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.6
 Date: 28. 01. 2025

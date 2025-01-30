@@ -44,6 +44,14 @@ data:extend({
               type = "unlock-recipe",
               recipe = "solid-fuel-liquefaction"
             },
+            {
+              type = "unlock-recipe",
+              recipe = "solid-fuel-liquefaction"
+            },
+            {
+              type = "unlock-recipe",
+              recipe = "golden-egg"
+            },
 
         },
         prerequisites = {"planet-discovery-aquilo"},
@@ -148,6 +156,10 @@ data:extend({
             type = "unlock-recipe",
             recipe = "speed-module-4-S",
           },
+          {
+            type = "unlock-recipe",
+            recipe = "golden-egg",
+          },
       },
       unit =
       {
@@ -172,7 +184,7 @@ data:extend({
 
     {
       type = "technology",
-      name = "transport-belt-capacity-3",
+      name = "transport-belt-capacity-3-Secretas",
       localised_description = {"technology-description.belt-capacity"},
       icons = util.technology_icon_constant_stack_size("__space-age__/graphics/technology/transport-belt-capacity.png"),
       effects =
