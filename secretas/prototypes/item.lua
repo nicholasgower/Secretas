@@ -232,7 +232,7 @@ data:extend(
         drop_sound = item_sounds.module_inventory_move,
         stack_size = 50,
         weight = 25 * kg,
-        effect = { productivity = 0.15, quality = 0.3, speed = -0.2, pollution = 0.15, consumption = 1.0  },
+        effect = { productivity = 0.15, speed = -0.2, pollution = 0.15, consumption = 1.0  },
         default_import_location = "frozeta",
     },
     {
