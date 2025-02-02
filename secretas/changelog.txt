@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.10
+Date: 1. 02. 2025
+  Bugfixes:
+    - Removed quality effect from level 4 quality modules. Thanks nicklas-dohrn for the PR!
+---------------------------------------------------------------------------------------------------
 Version: 1.0.9
 Date: 30. 01. 2025
   Major Features:
