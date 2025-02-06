@@ -6,7 +6,7 @@ data:extend(
 
   {
     type = "ambient-sound",
-    name = "aquilo-4-hero",
+    name = "frozeta-4-hero",
     track_type = "hero-track",
     planet = "frozeta",
     sound = "__space-age__/sound/ambient/aquilo/aquilo-4-hero.ogg",
@@ -14,7 +14,7 @@ data:extend(
   require("__space-age__/sound/ambient/aquilo/aquilo-1/aquilo-1"),
   {
     type = "ambient-sound",
-    name = "aquilo-2",
+    name = "frozeta-2",
     track_type = "main-track",
     planet = "frozeta",
     sound = "__space-age__/sound/ambient/aquilo/aquilo-2.ogg",
@@ -22,7 +22,7 @@ data:extend(
   },
   {
     type = "ambient-sound",
-    name = "aquilo-3",
+    name = "frozeta-3",
     track_type = "main-track",
     planet = "frozeta",
     sound = "__space-age__/sound/ambient/aquilo/aquilo-3.ogg",
@@ -30,7 +30,7 @@ data:extend(
   },
   {
     type = "ambient-sound",
-    name = "aquilo-4",
+    name = "frozeta-4",
     track_type = "main-track",
     planet = "frozeta",
     sound = "__space-age__/sound/ambient/aquilo/aquilo-4.ogg",
@@ -39,7 +39,7 @@ data:extend(
   require("__space-age__/sound/ambient/aquilo/aquilo-5/aquilo-5"),
   {
     type = "ambient-sound",
-    name = "aquilo-6",
+    name = "frozeta-6",
     track_type = "main-track",
     planet = "frozeta",
     sound = "__space-age__/sound/ambient/aquilo/aquilo-6.ogg",
@@ -48,7 +48,7 @@ data:extend(
   require("__space-age__/sound/ambient/aquilo/aquilo-7/aquilo-7"),
   {
     type = "ambient-sound",
-    name = "aquilo-8",
+    name = "frozeta-8",
     track_type = "main-track",
     planet = "frozeta",
     sound = "__space-age__/sound/ambient/aquilo/aquilo-8.ogg",
@@ -56,7 +56,7 @@ data:extend(
   },
   {
     type = "ambient-sound",
-    name = "aquilo-9",
+    name = "frozeta-9",
     track_type = "main-track",
     planet = "frozeta",
     sound = "__space-age__/sound/ambient/aquilo/aquilo-9.ogg",
