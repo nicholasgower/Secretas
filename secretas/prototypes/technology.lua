@@ -46,10 +46,6 @@ data:extend({
             },
             {
               type = "unlock-recipe",
-              recipe = "solid-fuel-liquefaction"
-            },
-            {
-              type = "unlock-recipe",
               recipe = "golden-egg"
             },
 
