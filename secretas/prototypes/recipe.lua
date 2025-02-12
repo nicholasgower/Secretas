@@ -147,7 +147,7 @@ data:extend(
     {
       type ="recipe",
       name ="golden-science-pack",
-      category ="crafting",
+      category ="crafting-with-fluid-or-metallurgy",
       icon ="__secretas__/graphics/icons/golden-science-pack.png",
       enabled = false,
       ingredients =
@@ -156,8 +156,16 @@ data:extend(
         {type ="item", name ="steam-turbine", amount = 2},
         {type ="item", name ="solid-fuel", amount = 7},
         {type ="item", name ="arithmetic-combinator", amount = 14},
+        {type ="fluid", name ="steam", amount = 250},
       },
-
+      surface_conditions =
+      {
+        {
+          property = "pressure",
+          min = 200,
+          max = 200
+        }
+      },
       energy_required = 20,
       results =
       {

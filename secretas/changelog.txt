@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.13
+Date: 2. 11. 2025
+  Major Features:
+    - Rebalanced Golden-Science pack recipe, such that you need to craft it on Frozeta.
+    - It is now crafting-with-fluid-or-metallurgy, and takes steam. So now you actually have to either conquer Frozeta to craft the science pack, or import everything, 
+---------------------------------------------------------------------------------------------------
+Version: 1.0.12
+Date: 2. 05. 2025
+  Bugfixes:
+    - Merged Talandar99's pull request, adding translations and recipe duplication
+    - Fixed order for modules. Thanks Pthread-Create
+---------------------------------------------------------------------------------------------------
 Version: 1.0.11
 Date: 2. 05. 2025
   Bugfixes:
