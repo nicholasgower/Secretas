@@ -186,14 +186,17 @@ data:extend(
       enabled = false,
       ingredients =
       {
-        {type ="item", name ="gold-plate", amount = 4},
-        {type ="item", name ="low-density-structure", amount = 2},
-        {type ="item", name ="advanced-circuit", amount = 1},
-        {type ="item", name ="stack-inserter", amount = 1},
-        {type ="item", name ="uranium-fuel-cell", amount = 1},
+        {type ="item", name ="gold-plate", amount = 10},
+        {type ="item", name ="low-density-structure", amount = 20},
+        {type ="item", name ="advanced-circuit", amount = 10},
+        {type ="item", name ="bulk-inserter", amount = 1},
+        {type ="item", name ="electric-engine-unit", amount = 5},
+        {type ="item", name ="steel-plate", amount = 3},
+        {type ="item", name ="iron-gear-wheel", amount = 30},
+        {type ="item", name ="uranium-fuel-cell", amount = 3},
       },
 
-      energy_required = 4,
+      energy_required = 16,
       results =
       {
         {type ="item", name ="hyper-inserter", amount = 1},

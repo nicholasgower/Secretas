@@ -19,10 +19,11 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
         icon = "__secretas__/graphics/icons/hyper-inserter.png",
         flags = {"placeable-neutral", "placeable-player", "player-creation"},
         minable = { mining_time = 0.1, result = "hyper-inserter" },
-        max_health = 150,
+        max_health = 170,
         corpse = "hyper-inserter-remnants",
         dying_explosion = "fast-inserter-explosion",
-        stack_size_bonus = 16,
+        max_belt_stack_size = 2,
+        stack_size_bonus = 8,
         resistances =
         {
           {
@@ -35,8 +36,8 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
         damaged_trigger_effect = hit_effects.entity(),
         pickup_position = {0, -1},
         insert_position = {0, 1.2},
-        energy_per_movement = "25kJ",
-        energy_per_rotation = "25kJ",
+        energy_per_movement = "70kJ",
+        energy_per_rotation = "70kJ",
         heating_energy = "0kW",
         energy_source =
         {
@@ -45,7 +46,7 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
           drain = "0.5kW"
         },
         extension_speed = 0.2,
-        rotation_speed = 0.08,
+        rotation_speed = 0.06,
         filter_count = 5,
         icon_draw_specification = {scale = 0.5},
         fast_replaceable_group = "inserter",

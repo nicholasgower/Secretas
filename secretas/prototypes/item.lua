@@ -99,7 +99,7 @@ data:extend(
         place_result = "hyper-inserter",
         stack_size = 50,
         default_import_location = "frozeta",
-        weight = 20*kg
+        weight = 35*kg
     },
     {
         type = "item",

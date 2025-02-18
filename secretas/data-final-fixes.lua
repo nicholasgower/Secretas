@@ -1,5 +1,8 @@
 local util_scripts = require("scripts")
 
+data.raw["inserter"]["stack-inserter"].max_belt_stack_size = 5 --thanks for Pthread-Create for bringing this up
+
+
 -- log("** before modification:")
 -- log(serpent.block(data.raw['technology']["science-pack-productivity"].effects))
 if(settings.startup["automatically-populate-science-pack-productivity-research"].value) then
