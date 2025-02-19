@@ -214,6 +214,179 @@ data:extend({
       upgrade = true
     },
 
+    --Worker robot storage
+
+    {
+      type = "technology",
+      name = "worker-robots-storage-4",
+      icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
+      effects =
+      {
+        {
+          type = "worker-robot-storage",
+          modifier = 1
+        }
+      },
+      prerequisites = {"worker-robots-storage-3", "planet-discovery-secretas"},
+      unit =
+      {
+        count = 900,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1},
+        },
+        time = 60
+      },
+      upgrade = true
+    },
+
+    {
+      type = "technology",
+      name = "worker-robots-storage-5",
+      icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
+      effects =
+      {
+        {
+          type = "worker-robot-storage",
+          modifier = 1
+        }
+      },
+      prerequisites = {"worker-robots-storage-4"},
+      unit =
+      {
+        count = 1800,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1},
+        },
+        time = 60
+      },
+      upgrade = true
+    },
+
+    {
+      type = "technology",
+      name = "worker-robots-storage-6",
+      icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
+      effects =
+      {
+        {
+          type = "worker-robot-storage",
+          modifier = 1
+        }
+      },
+      prerequisites = {"worker-robots-storage-5"},
+      unit =
+      {
+        count = 3600,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1},
+        },
+        time = 60
+      },
+      upgrade = true
+    },
+
+    {
+      type = "technology",
+      name = "worker-robots-storage-7",
+      icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
+      effects =
+      {
+        {
+          type = "worker-robot-storage",
+          modifier = 1
+        }
+      },
+      prerequisites = {"worker-robots-storage-6"},
+      unit =
+      {
+        count = 7200,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1},
+        },
+        time = 60
+      },
+      upgrade = true
+    },
+
+    {
+      type = "technology",
+      name = "worker-robots-storage-8",
+      icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
+      effects =
+      {
+        {
+          type = "worker-robot-storage",
+          modifier = 1
+        }
+      },
+      prerequisites = {"worker-robots-storage-7"},
+      unit =
+      {
+        count = 14400,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1},
+          {"promethium-science-pack", 1},
+        },
+        time = 60
+      },
+      upgrade = true
+    },
+
     --INFINITE-ISH
 
     {

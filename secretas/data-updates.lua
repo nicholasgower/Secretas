@@ -5,4 +5,4 @@ for k,v in pairs(all_lab_types) do
 end
 
 data.raw['furnace']['recycler'].result_inventory_size = 40
-data.raw["utility-constants"]["default"].max_belt_stack_size = 5
+--data.raw["utility-constants"]["default"].max_belt_stack_size = 5

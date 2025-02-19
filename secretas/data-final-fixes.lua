@@ -1,6 +1,14 @@
 local util_scripts = require("scripts")
 
-data.raw["inserter"]["stack-inserter"].max_belt_stack_size = 5 --thanks for Pthread-Create for bringing this up
+--data.raw["inserter"]["stack-inserter"].max_belt_stack_size = 5 --thanks for Pthread-Create for bringing this up.
+
+--local defaultmaxbelt = data.raw["inserter"]["stack-inserter"].max_belt_stack_size or 4
+for i,v in pairs(data.raw["inserter"]) do -- this should also modify stack inserters, and any other inserter.
+	local maxbelt = v.max_belt_stack_size or 1
+	if maxbelt ~= 1 then
+		v.max_belt_stack_size = maxbelt + 1
+	end
+end
 
 
 -- log("** before modification:")

@@ -22,8 +22,9 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
         max_health = 170,
         corpse = "hyper-inserter-remnants",
         dying_explosion = "fast-inserter-explosion",
-        max_belt_stack_size = 2,
+        max_belt_stack_size = 5,
         stack_size_bonus = 8,
+        bulk = true,
         resistances =
         {
           {

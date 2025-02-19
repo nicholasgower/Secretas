@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.15
+Date: 2. 18. 2025
+  Major Features:
+    - Updated how updating inserter belt stack sizes is handled, thanks Pthread-Create
+    - Robot worker storage capacity research 4+ added. (Not infinite)
+    - Hyper inserters now classified as bulk inserters, and default belt stack size is increased to 5 
+---------------------------------------------------------------------------------------------------
 Version: 1.0.14
 Date: 2. 17. 2025
   Major Features:
