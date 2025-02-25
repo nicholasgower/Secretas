@@ -18,6 +18,7 @@ end
 
 util_scripts.get_all_science_from_all_labs = function ()
 	local all_science = {}
+	--[[
 	for _, lab in pairs(data.raw['lab']) do
 			for __, lab_input in pairs(lab.inputs) do
 					if(not util_scripts.table_contains(all_science, lab_input)) then
@@ -25,6 +26,15 @@ util_scripts.get_all_science_from_all_labs = function ()
 					end
 			end
 	end
+	--]]
+	for __, lab_input in pairs(data.raw['lab']['lab'].inputs) do --just parse the default lab, other labs are causing problems....
+		if(not util_scripts.table_contains(all_science, lab_input)) then
+				table.insert(all_science, lab_input)
+		end
+	end
+
+
+
 	-- log("**all_science:")
 	-- log(serpent.block(all_science))
 	return all_science
