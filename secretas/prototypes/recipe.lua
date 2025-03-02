@@ -27,22 +27,22 @@ data:extend(
         ingredients = {{type = "item", name = "spaceship-scrap", amount = 1}},
         results =
         {
-          {type = "item", name = "processing-unit",        amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "processing-unit",        amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           {type = "item", name = "advanced-circuit",       amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "low-density-structure",  amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "low-density-structure",  amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
           {type = "item", name = "solid-fuel",             amount = 1, probability = 0.07, show_details_in_recipe_tooltip = false},
           {type = "item", name = "steel-plate",            amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
           --11
-          {type = "item", name = "battery",                amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "battery",                amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "ice",                    amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
           --10
-          {type = "item", name = "iron-gear-wheel",        amount = 1, probability = 0.13, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "iron-gear-wheel",        amount = 1, probability = 0.10, show_details_in_recipe_tooltip = false},
           --15
-          {type = "item", name = "copper-cable",           amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "stone",                  amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "copper-cable",           amount = 1, probability = 0.04, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "stone",                  amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "electric-engine-unit",   amount = 1, probability = 0.06, show_details_in_recipe_tooltip = false},
           --14
-          {type = "item", name = "plastic-bar",            amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "plastic-bar",            amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           {type = "item", name = "lithium-plate",          amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "supercapacitor",          amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "tungsten-plate",          amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
@@ -50,10 +50,10 @@ data:extend(
           {type = "item", name = "solar-panel",            amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "space-platform-foundation", amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "boiler",                  amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "depleted-uranium-fuel-cell",   amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "depleted-uranium-fuel-cell",   amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
           --10
           {type = "item", name = "holmium-plate",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "spoilage",   amount = 1, probability = 0.06, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "spoilage",   amount = 1, probability = 0.04, show_details_in_recipe_tooltip = false},
           {type = "item", name = "flying-robot-frame",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "steam-turbine",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "laser-turret",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
@@ -62,19 +62,19 @@ data:extend(
           {type = "item", name = "iron-plate",   amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           {type = "item", name = "pipe",   amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
           {type = "item", name = "storage-tank",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "rocket",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "rocket",   amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
           --10
           {type = "item", name = "inserter",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "pump",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "medium-electric-pole",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "small-lamp",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "gold-ore",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "gold-ore",   amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           {type = "item", name = "arithmetic-combinator",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "constant-combinator",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "display-panel",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "heat-pipe",   amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
           --11
-          {type = "item", name = "scrap",   amount = 1, probability = 0.09, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "scrap",   amount = 1, probability = 0.10, show_details_in_recipe_tooltip = false},
 
         }
     },
@@ -190,9 +190,9 @@ data:extend(
         {type ="item", name ="low-density-structure", amount = 20},
         {type ="item", name ="advanced-circuit", amount = 10},
         {type ="item", name ="bulk-inserter", amount = 1},
-        {type ="item", name ="electric-engine-unit", amount = 5},
-        {type ="item", name ="steel-plate", amount = 3},
-        {type ="item", name ="iron-gear-wheel", amount = 30},
+        {type ="item", name ="electric-engine-unit", amount = 10},
+        {type ="item", name ="steel-plate", amount = 5},
+        {type ="item", name ="iron-gear-wheel", amount = 40},
         {type ="item", name ="uranium-fuel-cell", amount = 3},
       },
 
@@ -214,11 +214,11 @@ data:extend(
       enabled = false,
       ingredients =
       {
-        {type ="item", name ="processing-unit", amount = 6},
+        {type ="item", name ="processing-unit", amount = 10},
         {type ="item", name ="steel-plate", amount = 20},
         {type ="item", name ="iron-gear-wheel", amount = 40},
         {type ="item", name ="concrete", amount = 20},
-        {type ="item", name ="copper-plate", amount = 50},
+        {type ="item", name ="copper-plate", amount = 25},
         {type ="item", name ="pipe", amount = 20},
         {type ="item", name ="iron-plate", amount = 10},
       },
@@ -266,10 +266,10 @@ data:extend(
       ingredients =
       {
         {type ="item", name ="quality-module-3", amount = 4},
-        {type ="item", name ="processing-unit", amount = 5},
-        {type ="item", name ="advanced-circuit", amount = 5},
-        {type ="item", name ="gold-plate", amount = 4},
-        {type ="item", name ="supercapacitor", amount = 1},
+        {type ="item", name ="processing-unit", amount = 7},
+        {type ="item", name ="advanced-circuit", amount = 7},
+        {type ="item", name ="gold-plate", amount = 6},
+        {type ="item", name ="supercapacitor", amount = 4},
       },
 
       energy_required = 120,
@@ -290,10 +290,10 @@ data:extend(
       ingredients =
       {
         {type ="item", name ="efficiency-module-3", amount = 4},
-        {type ="item", name ="processing-unit", amount = 5},
-        {type ="item", name ="advanced-circuit", amount = 5},
-        {type ="item", name ="gold-plate", amount = 4},
-        {type ="item", name ="bioflux", amount = 1},
+        {type ="item", name ="processing-unit", amount = 7},
+        {type ="item", name ="advanced-circuit", amount = 7},
+        {type ="item", name ="gold-plate", amount = 6},
+        {type ="item", name ="bioflux", amount = 4},
       },
 
       energy_required = 120,
@@ -314,10 +314,10 @@ data:extend(
       ingredients =
       {
         {type ="item", name ="productivity-module-3", amount = 4},
-        {type ="item", name ="processing-unit", amount = 5},
-        {type ="item", name ="advanced-circuit", amount = 5},
-        {type ="item", name ="gold-plate", amount = 4},
-        {type ="item", name ="golden-biter-egg", amount = 1},
+        {type ="item", name ="processing-unit", amount = 7},
+        {type ="item", name ="advanced-circuit", amount = 7},
+        {type ="item", name ="gold-plate", amount = 6},
+        {type ="item", name ="golden-biter-egg", amount = 2},
       },
 
       energy_required = 120,
@@ -338,9 +338,9 @@ data:extend(
       ingredients =
       {
         {type ="item", name ="speed-module-3", amount = 4},
-        {type ="item", name ="processing-unit", amount = 5},
-        {type ="item", name ="advanced-circuit", amount = 5},
-        {type ="item", name ="gold-plate", amount = 4},
+        {type ="item", name ="processing-unit", amount = 7},
+        {type ="item", name ="advanced-circuit", amount = 7},
+        {type ="item", name ="gold-plate", amount = 6},
         {type ="item", name ="tungsten-plate", amount = 5},
       },
 
@@ -373,7 +373,7 @@ data:extend(
       {
         {type = "item", name = "solid-fuel", amount = 5},
         {type = "fluid", name = "heavy-oil", amount = 50, ignored_by_stats = 50},
-        {type = "fluid", name = "steam", amount = 200}
+        {type = "fluid", name = "steam", amount = 250}
       },
       results =
       {

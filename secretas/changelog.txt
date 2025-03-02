@@ -1,4 +1,31 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.17
+Date: 3. 2. 2025
+  Major Features:
+    - Adjusted pressure and gravity of Frozeta to ensure robots with no speed buffs cannot be caught in a charging loop. Robot energy usage is gravity/pressure * 100. Currently now 3.5
+    - Secretas discovery technology uses nice image of the planet.
+    - Integrated  Pthread-Create's pull request regarding loaders.
+    - New technology - gold plate productivity
+    - Planet discovery secrets technology now requires cryogenic science pack research. No gameplay changes. Just consistency. 
+
+  Balancing:
+    - Spaceship scrap recycling.
+    - Less gears, more LDS. Now 3% chance of LDS, was 1%. Iron gears now 10% from 13%. Scrap now at 10% from 9%.
+    - Hyper inserters slightly more expensive. 10 electric engine units, and 40 iron gear wheels.
+    - Less spoilage (6% to 4%, to more rockets 1% to 3%)
+    - Less copper cable. (5%to 4% for gold ore (1%to 2%)
+    - Stone now 1% from 2%, uranium fuel cell now 3% from 2%
+    - Battery now at 1% from 3%. Plastic-bar at 2% from 1%. Processing unit now at 2%, from 1%. 
+    - Level 4 modules now take 7 red and blue circuits, from 4. 
+    - Level 4 modules now take 6 gold plates, from 4. 
+    - Secretas gravity pull now 40, from 10. (For realism) 
+    - Solid fuel liquefaction now costs 250 steam, from 200.
+    - Quality 4 modules now takes 4 supercapacitors, from 1
+    - Productivity 4 modules now take 4 golden biter eggs, from 1
+    - Efficiency 4 modules use 4 bio flux
+    - Steam recycler crafting: takes 10 processing from 6. 25 Copper plates, from 50.
+    - Steam recycler now has a crafting speed of 1.3, from 0.7.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.16
 Date: 2. 24. 2025
   Major Features:

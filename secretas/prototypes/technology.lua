@@ -50,7 +50,7 @@ data:extend({
             },
 
         },
-        prerequisites = {"planet-discovery-aquilo"},
+        prerequisites = {"planet-discovery-aquilo","cryogenic-science-pack"},
         unit =
         {
           count = 3000,
@@ -525,7 +525,46 @@ data:extend({
       upgrade = true
     },
 
-
+    {
+      type = "technology",
+      name = "gold-plate-productivity",
+      icons = util.technology_icon_constant_recipe_productivity("__secretas__/graphics/technology/gold-plate-productivity.png"),
+      icon_size = 256,
+      effects =
+      {
+        {
+          type = "change-recipe-productivity",
+          recipe = "gold-plate-production",
+          change = 0.07,
+        },
+        {
+          type = "change-recipe-productivity",
+          recipe = "gold-plate-production-alt",
+          change = 0.07,
+        }
+      },
+      prerequisites = {"planet-discovery-secretas"},
+      unit =
+      {
+        count_formula = "1.5^L*1000",
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1},
+        },
+        time = 60
+      },
+      max_level = "infinite",
+      upgrade = true
+    },
 
 }
 )

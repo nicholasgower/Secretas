@@ -201,7 +201,7 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
       crafting_categories = {"recycling", "recycling-or-hand-crafting"},
       result_inventory_size = 40,
       energy_usage = "600kW",
-      crafting_speed = 0.7,
+      crafting_speed = 1.3,
       source_inventory_size = 1,
       custom_input_slot_tooltip_key = "recycler-input-slot-tooltip",
       heating_energy = "0W",

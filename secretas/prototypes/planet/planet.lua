@@ -16,7 +16,7 @@ data:extend(
         starmap_icon_size = 512,
         order = "h[secretas]",
         subgroup = "planets",
-        gravity_pull = 10,
+        gravity_pull = 40,
         distance = 45,
         orientation = 0.18,
         magnitude = 3.0,
