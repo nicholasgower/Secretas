@@ -56,9 +56,9 @@ data:extend(
         {
           ["day-night-cycle"] = 20 * minute,
           ["magnetic-field"] = 10,
-          pressure = 200,
+          pressure = 280,
           ["solar-power"] = 1,
-          gravity = 15
+          gravity = 10
         },
         asteroid_spawn_influence = 1,
         asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.aquilo_secretas, 0.9), --TODO adjust

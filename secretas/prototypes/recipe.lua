@@ -163,7 +163,7 @@ data:extend(
         {
           property = "pressure",
           min = 200,
-          max = 200
+          max = 280
         }
       },
       energy_required = 20,
