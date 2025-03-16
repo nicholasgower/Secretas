@@ -5,16 +5,11 @@ data:extend({
     {
         type = "technology",
         name = "planet-discovery-secretas",
-        icons = util.technology_icon_constant_planet("__secretas__/graphics/technology/secretas-discovery.png"),
+        icons = util.technology_icon_constant_planet("__secretas__/graphics/technology/frozeta-discovery.png"),
         icon_size = 256,
         essential = true,
         effects =
         {
-            {
-                type = "unlock-space-location",
-                space_location = "secretas",
-                use_icon_overlay_constant = true
-            },
             {
                 type = "unlock-space-location",
                 space_location = "frozeta",
@@ -568,3 +563,44 @@ data:extend({
 
 }
 )
+
+if mods["dea-dia-system"] then
+  
+  data:extend{{
+    type = "technology",
+    name = "planet-discovery-gas-giant-secretas",
+    icons = util.technology_icon_constant_planet("__secretas__/graphics/technology/secretas-discovery.png"),
+    icon_size = 256,
+    essential = true,
+    effects =
+    {
+        {
+            type = "unlock-space-location",
+            space_location = "secretas",
+            use_icon_overlay_constant = true
+        },
+    },
+    prerequisites = {"planet-discovery-secretas", "planet-discovery-dea-dia"},
+    unit =
+    {
+      count = 3000,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"metallurgic-science-pack", 1},
+        {"agricultural-science-pack", 1},
+        {"electromagnetic-science-pack", 1},
+        {"cryogenic-science-pack", 1},
+        {"golden-science-pack", 1},
+        {"aerospace-science-pack", 1},
+      },
+      time = 60
+    }
+}}
+
+end
