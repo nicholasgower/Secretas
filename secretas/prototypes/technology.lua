@@ -1,75 +1,194 @@
 require("util")
 
+if (mods["dea-dia-system"] == false or mods["dea-dia-system"] == nil ) then
+  data:extend({
+    {
+      type = "technology",
+      name = "planet-discovery-secretas",
+      icons = util.technology_icon_constant_planet("__secretas__/graphics/technology/secretas-discovery.png"),
+      icon_size = 256,
+      essential = true,
+      effects =
+      {
+          {
+              type = "unlock-space-location",
+              space_location = "secretas",
+              use_icon_overlay_constant = true
+          },
+          {
+              type = "unlock-space-location",
+              space_location = "frozeta",
+              use_icon_overlay_constant = true
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "spaceship-scrap-recycling",
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "gold-plate-production"
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "gold-plate-production-alt"
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "auric-asteroid-crushing"
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "golden-science-pack"
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "solid-fuel-liquefaction"
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "golden-egg"
+          },
+
+      },
+      prerequisites = {"planet-discovery-aquilo","cryogenic-science-pack"},
+      unit =
+      {
+        count = 3000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"cryogenic-science-pack", 1}
+        },
+        time = 60
+      }
+    },
+  
+  })
+end
+
+if mods["dea-dia-system"] then
+
+  data:extend(
+  {
+    {
+      type = "technology",
+      name = "planet-discovery-frozeta",
+      icons = util.technology_icon_constant_planet("__secretas__/graphics/technology/frozeta-discovery.png"),
+      icon_size = 256,
+      essential = true,
+      effects =
+      {
+          {
+              type = "unlock-space-location",
+              space_location = "frozeta",
+              use_icon_overlay_constant = true
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "spaceship-scrap-recycling",
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "gold-plate-production"
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "gold-plate-production-alt"
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "auric-asteroid-crushing"
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "golden-science-pack"
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "solid-fuel-liquefaction"
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "golden-egg"
+          },
+
+      },
+      prerequisites = {"planet-discovery-aquilo","cryogenic-science-pack"},
+      unit =
+      {
+        count = 3000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"cryogenic-science-pack", 1}
+        },
+        time = 60
+      }
+    },
+    {
+      type = "technology",
+      name = "planet-discovery-secretas",
+      icons = util.technology_icon_constant_planet("__secretas__/graphics/technology/secretas-discovery.png"),
+      icon_size = 256,
+      essential = true,
+      effects =
+      {
+          {
+              type = "unlock-space-location",
+              space_location = "secretas",
+              use_icon_overlay_constant = true
+          },
+      },
+      prerequisites = {"planet-discovery-secretas", "planet-discovery-dea-dia"},
+      unit =
+      {
+        count = 3000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1},
+          {"aerospace-science-pack", 1},
+        },
+        time = 60
+      }
+    }
+
+  })
+  
+end
+
+
+
+
+
 data:extend({
     --BASICS
-    {
-        type = "technology",
-        name = "planet-discovery-secretas",
-        icons = util.technology_icon_constant_planet("__secretas__/graphics/technology/secretas-discovery.png"),
-        icon_size = 256,
-        essential = true,
-        effects =
-        {
-            {
-                type = "unlock-space-location",
-                space_location = "secretas",
-                use_icon_overlay_constant = true
-            },
-            {
-                type = "unlock-space-location",
-                space_location = "frozeta",
-                use_icon_overlay_constant = true
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "spaceship-scrap-recycling",
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "gold-plate-production"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "gold-plate-production-alt"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "auric-asteroid-crushing"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "golden-science-pack"
-            },
-            {
-              type = "unlock-recipe",
-              recipe = "solid-fuel-liquefaction"
-            },
-            {
-              type = "unlock-recipe",
-              recipe = "golden-egg"
-            },
 
-        },
-        prerequisites = {"planet-discovery-aquilo","cryogenic-science-pack"},
-        unit =
-        {
-          count = 3000,
-          ingredients =
-          {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"production-science-pack", 1},
-            {"utility-science-pack", 1},
-            {"space-science-pack", 1},
-            {"metallurgic-science-pack", 1},
-            {"agricultural-science-pack", 1},
-            {"electromagnetic-science-pack", 1},
-            {"cryogenic-science-pack", 1}
-          },
-          time = 60
-        }
-    },
     {
         type = "technology",
         name = "hyper-inserter",
