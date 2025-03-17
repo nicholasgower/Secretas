@@ -1,4 +1,5 @@
-local planet_map_gen = require("__space-age__/prototypes/planet/planet-map-gen")
+local planet_map_gen = require("__secretas__/prototypes/planet/secretas-map-gen")
+
 
 planet_map_gen.frozeta = function() --TODO add all my decorations.
     return
