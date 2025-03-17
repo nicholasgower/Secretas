@@ -231,8 +231,3 @@ data:extend
         trigger_effect = tile_trigger_effects.stone_path_trigger_effect()
     },
 }
-
---include the tile for secretas when dea dia is installed.
-if mods["dea-dia-system"] then
-  require("prototypes.tile.secretas")
-end
