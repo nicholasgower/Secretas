@@ -1,0 +1,1 @@
+data.raw["beacon"]["beacon"].graphics_set = require("prototypes.beacon-animations")

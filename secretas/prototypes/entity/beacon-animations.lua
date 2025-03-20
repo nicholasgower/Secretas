@@ -105,11 +105,11 @@
               render_layer = "lower-object",
               pictures =
               {
-                filename = "__base__/graphics/entity/beacon/beacon-module-slot-1.png",
-                line_length = 4,
+                filename = "__secretas__/graphics/entity/beacon/modified_beacon-module-slot-1.png",
+                line_length = 5,
                 width = 50,
                 height = 66,
-                variation_count = 4,
+                variation_count = 5,
                 scale = 0.5,
                 shift = util.by_pixel(-16, 14.5)
               }
@@ -119,11 +119,11 @@
               render_layer = "lower-object",
               pictures =
               {
-                filename = "__base__/graphics/entity/beacon/beacon-module-mask-box-1.png",
-                line_length = 3,
+                filename = "__secretas__/graphics/entity/beacon/modified_beacon-module-mask-box-1.png",
+                line_length = 4,
                 width = 36,
                 height = 32,
-                variation_count = 3,
+                variation_count = 4,
                 scale = 0.5,
                 shift = util.by_pixel(-17, 15)
               }
@@ -133,11 +133,11 @@
               render_layer = "lower-object-above-shadow",
               pictures =
               {
-                filename = "__base__/graphics/entity/beacon/beacon-module-mask-lights-1.png",
-                line_length = 3,
+                filename = "__secretas__/graphics/entity/beacon/modified_beacon-module-mask-lights-1.png",
+                line_length = 4,
                 width = 26,
                 height = 12,
-                variation_count = 3,
+                variation_count = 4,
                 scale = 0.5,
                 shift = util.by_pixel(-18.5, 13)
               }
@@ -147,11 +147,11 @@
               render_layer = "lower-object-above-shadow",
               pictures =
               {
-                filename = "__base__/graphics/entity/beacon/beacon-module-lights-1.png",
-                line_length = 3,
+                filename = "__secretas__/graphics/entity/beacon/modified_beacon-module-lights-1.png",
+                line_length = 4,
                 width = 56,
                 height = 42,
-                variation_count = 3,
+                variation_count = 4,
                 shift = util.by_pixel(-18, 13),
                 draw_as_light = true,
                 scale = 0.5
@@ -165,11 +165,11 @@
               render_layer = "lower-object",
               pictures =
               {
-                filename = "__base__/graphics/entity/beacon/beacon-module-slot-2.png",
-                line_length = 4,
+                filename = "__secretas__/graphics/entity/beacon/modified_beacon-module-slot-2.png",
+                line_length = 5,
                 width = 46,
                 height = 44,
-                variation_count = 4,
+                variation_count = 5,
                 scale = 0.5,
                 shift = util.by_pixel(19, -12)
               }
@@ -179,11 +179,11 @@
               render_layer = "lower-object",
               pictures =
               {
-                filename = "__base__/graphics/entity/beacon/beacon-module-mask-box-2.png",
-                line_length = 3,
+                filename = "__secretas__/graphics/entity/beacon/modified_beacon-module-mask-box-2.png",
+                line_length = 4,
                 width = 36,
                 height = 26,
-                variation_count = 3,
+                variation_count = 4,
                 scale = 0.5,
                 shift = util.by_pixel(20.5, -12)
               }
@@ -193,11 +193,11 @@
               render_layer = "lower-object-above-shadow",
               pictures =
               {
-                filename = "__base__/graphics/entity/beacon/beacon-module-mask-lights-2.png",
-                line_length = 3,
+                filename = "__secretas__/graphics/entity/beacon/modified_beacon-module-mask-lights-2.png",
+                line_length = 4,
                 width = 24,
                 height = 14,
-                variation_count = 3,
+                variation_count = 4,
                 scale = 0.5,
                 shift = util.by_pixel(22, -15.5)
               }
@@ -207,11 +207,11 @@
               render_layer = "lower-object-above-shadow",
               pictures =
               {
-                filename = "__base__/graphics/entity/beacon/beacon-module-lights-2.png",
-                line_length = 3,
+                filename = "__secretas__/graphics/entity/beacon/modified_beacon-module-lights-2.png",
+                line_length = 4,
                 width = 66,
                 height = 46,
-                variation_count = 3,
+                variation_count = 4,
                 shift = util.by_pixel(22, -16),
                 draw_as_light = true,
                 scale = 0.5
