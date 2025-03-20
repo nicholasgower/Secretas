@@ -1,3 +1,4 @@
+require("__secretas__.vanilla-updates")
 require("__secretas__.prototypes.entity.entities")
 --require("__secretas__.prototypes.factoriopedia-simulations")
 --require("__secretas__.prototypes.fluid")
