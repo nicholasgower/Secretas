@@ -233,6 +233,6 @@ data:extend
 }
 
 --include the tile for secretas when dea dia is installed.
-if mods["dea-dia-system"] then
+if (mods["dea-dia-system"] and settings.startup["ignore-dea-dia-compatibility"].value == false) then
   require("prototypes.tile.secretas")
 end

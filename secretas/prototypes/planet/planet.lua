@@ -7,7 +7,7 @@ local asteroid_util = require("__secretas__.prototypes.planet.asteroid-spawn-def
 local space_age_asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-definitions")
 
 --Default behavior
-if (mods["dea-dia-system"] == false or mods["dea-dia-system"] == nil ) then
+if ((mods["dea-dia-system"] == false or mods["dea-dia-system"] == nil) or settings.startup["ignore-dea-dia-compatibility"].value == true ) then
   data:extend(
   {
       {
@@ -158,7 +158,7 @@ end
 --return nil
 --If we reach here and have dea-dia
 
-if (mods["dea-dia-system"]) then
+if (mods["dea-dia-system"] and settings.startup["ignore-dea-dia-compatibility"].value == false) then
 
   local secretas_planet_map_gen = require("__secretas__/prototypes/planet/secretas-map-gen")
   local secretas = 

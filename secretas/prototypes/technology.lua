@@ -1,6 +1,6 @@
 require("util")
 
-if (mods["dea-dia-system"] == false or mods["dea-dia-system"] == nil ) then
+if ((mods["dea-dia-system"] == false or mods["dea-dia-system"] == nil) or settings.startup["ignore-dea-dia-compatibility"].value == true ) then
   data:extend({
     {
       type = "technology",
@@ -37,10 +37,6 @@ if (mods["dea-dia-system"] == false or mods["dea-dia-system"] == nil ) then
               recipe = "auric-asteroid-crushing"
           },
           {
-              type = "unlock-recipe",
-              recipe = "golden-science-pack"
-          },
-          {
             type = "unlock-recipe",
             recipe = "solid-fuel-liquefaction"
           },
@@ -74,7 +70,7 @@ if (mods["dea-dia-system"] == false or mods["dea-dia-system"] == nil ) then
   })
 end
 
-if mods["dea-dia-system"] then
+if (mods["dea-dia-system"] and settings.startup["ignore-dea-dia-compatibility"].value == false) then
 
   data:extend(
   {
@@ -106,10 +102,6 @@ if mods["dea-dia-system"] then
           {
               type = "unlock-recipe",
               recipe = "auric-asteroid-crushing"
-          },
-          {
-              type = "unlock-recipe",
-              recipe = "golden-science-pack"
           },
           {
             type = "unlock-recipe",
@@ -241,6 +233,27 @@ data:extend({
       {
           type = "mine-entity",
           entity = "spaceship-scrap"
+      },
+      prerequisites = { "planet-discovery-secretas"}
+    },
+    {
+      type = "technology",
+      name = "golden-science-pack",
+      icon_size = 256,
+      icons = util.technology_icon_constant_recipe_productivity("__secretas__/graphics/technology/gold-science-pack.png"),
+      essential = true,
+      effects =
+      {
+          {
+              type = "unlock-recipe",
+              recipe = "golden-science-pack"
+          },
+      },
+      research_trigger =
+      {
+          type = "craft-item",
+          item = "gold-plate",
+          count = 20
       },
       prerequisites = { "planet-discovery-secretas"}
     },
@@ -608,7 +621,7 @@ data:extend({
         {
           type = "change-recipe-productivity",
           recipe = "golden-science-pack",
-          change = 0.005
+          change = 0.01
         },
         {
           type = "change-recipe-productivity",
