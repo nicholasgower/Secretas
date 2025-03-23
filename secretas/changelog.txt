@@ -3,7 +3,7 @@ Version: 1.0.19
 Date: 3. 22. 2025
   Major Features:
     - Boilerplate code for dea-dia compatibility
-    - Cubium compatibility: Dream recipe for golden science.
+    - Cubium compatibility: Dream recipe for golden science. Cubic science pack recipes now buffed by science pack productivity
     - Science pack productivity - golden science 0.005 to 0.01. Game was rounding 0.005 to 0
     - Golden science now has its own trigger technology. Craft 20 golden plates.
     - Mod setting to disable all compatibility code with dea-dia (except control code) even if dea-dia is installed. This is default to true until the integration and testing is complete.
