@@ -219,12 +219,12 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
           pipe_connections =
           {
               {
-              flow_direction="output", --only one that seems to be working.
+              flow_direction="output", 
               direction = defines.direction.west,
-              position = {-0.5, 0.5}, --0.45,1.2 x looks decent
+              position = {-0.5, 0.5}, 
               },
               {
-                flow_direction="output", --only one that seems to be working.
+                flow_direction="input", 
                 direction = defines.direction.east,
                 position = {0.5, 0.5},
               },
@@ -234,7 +234,7 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
                 position = {-0.5, -0.5}, 
               },
               {
-                flow_direction="input", 
+                flow_direction="output", 
                 direction = defines.direction.east,
                 position = {0.5, -0.5},
               },

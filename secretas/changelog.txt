@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.20
+Date: 4. 4. 2025
+  Major Features:
+    - Data updates final fixes now ensures Maraxis science packs are excluded from science pack productivity, thanks Pthread-create
+    - Steam recycler crafting locked to Frozeta by default, this can be adjusted in the mod settings. Was informed this would make gameplay more fun,as now you have a building to automate on Frozeta
+    - Steam recycler fluid boxes adjusted. Original solution was to have pipes between each one, but it turns out reverse tiling them was broken. Now you can easily have steam pass through from one recycler to another without pipes inbetween
+    - Split module finale into its own technologies. This helps accomodate players who use technology science multipliers. This behavior can be reverted with a new mod setting, such that you don't have to adjust your saves.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.19
 Date: 3. 22. 2025
   Major Features:

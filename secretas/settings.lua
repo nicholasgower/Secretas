@@ -16,5 +16,17 @@ data:extend({
         name = "modify-loaders-for-belt-stack-size-limit",
         setting_type = "startup",
         default_value = false
+    },
+    {
+        type = "bool-setting",
+        name = "restrict-steam-recycler-crafting-to-frozeta",
+        setting_type = "startup",
+        default_value = true
+    },
+    {
+        type = "bool-setting",
+        name = "condense-level-4-modules-into-one-technology",
+        setting_type = "startup",
+        default_value = false
     }
 })

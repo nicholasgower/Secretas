@@ -260,55 +260,7 @@ data:extend({
 
 
     --EMPOWER
-    {
-      type = "technology",
-      name = "module-finale",
-      icons = util.technology_icon_constant_recipe_productivity("__secretas__/graphics/technology/module.png"),
-      icon_size = 256,
-      prerequisites = {"planet-discovery-secretas"},
-      effects =
-      {
-          {
-              type = "unlock-recipe",
-              recipe = "quality-module-4-S",
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "productivity-module-4-S",
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "efficiency-module-4-S",
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "speed-module-4-S",
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "golden-egg",
-          },
-      },
-      unit =
-      {
-        count = 7500,
-        ingredients =
-        {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"production-science-pack", 1},
-          {"utility-science-pack", 1},
-          {"space-science-pack", 1},
-          {"metallurgic-science-pack", 1},
-          {"agricultural-science-pack", 1},
-          {"electromagnetic-science-pack", 1},
-          {"cryogenic-science-pack", 1},
-          {"golden-science-pack", 1}
-        },
-        time = 60
-      }
-    },
+
 
     {
       type = "technology",
@@ -700,3 +652,197 @@ data:extend({
 
 }
 )
+
+if(settings.startup["condense-level-4-modules-into-one-technology"].value) then
+  data:extend({
+    {
+      type = "technology",
+      name = "module-finale",
+      icons = util.technology_icon_constant_recipe_productivity("__secretas__/graphics/technology/module.png"),
+      icon_size = 256,
+      prerequisites = {"planet-discovery-secretas"},
+      effects =
+      {
+          {
+              type = "unlock-recipe",
+              recipe = "quality-module-4-S",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "productivity-module-4-S",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "efficiency-module-4-S",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "speed-module-4-S",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "golden-egg",
+          },
+      },
+      unit =
+      {
+        count = 7500,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1}
+        },
+        time = 60
+      }
+    }
+  })
+
+else
+  data:extend({
+    {
+      type = "technology",
+      name = "quality-module-4-S",
+      icons = util.technology_icon_constant_recipe_productivity("__secretas__/graphics/technology/quality-module-4-tech.png"),
+      icon_size = 256,
+      prerequisites = {"planet-discovery-secretas"},
+      effects =
+      {
+          {
+              type = "unlock-recipe",
+              recipe = "quality-module-4-S",
+          }
+      },
+      unit =
+      {
+        count = 2000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1}
+        },
+        time = 60
+      }
+    },
+    {
+      type = "technology",
+      name = "efficiency-module-4-S",
+      icons = util.technology_icon_constant_recipe_productivity("__secretas__/graphics/technology/efficiency-module-4-tech.png"),
+      icon_size = 256,
+      prerequisites = {"planet-discovery-secretas"},
+      effects =
+      {
+          {
+              type = "unlock-recipe",
+              recipe = "efficiency-module-4-S",
+          }
+      },
+      unit =
+      {
+        count = 2000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1}
+        },
+        time = 60
+      }
+    },
+    {
+      type = "technology",
+      name = "speed-module-4-S",
+      icons = util.technology_icon_constant_recipe_productivity("__secretas__/graphics/technology/speed-module-4-tech.png"),
+      icon_size = 256,
+      prerequisites = {"planet-discovery-secretas"},
+      effects =
+      {
+          {
+              type = "unlock-recipe",
+              recipe = "speed-module-4-S",
+          }
+      },
+      unit =
+      {
+        count = 2000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1}
+        },
+        time = 60
+      }
+    },
+    {
+      type = "technology",
+      name = "productivity-module-4-S",
+      icons = util.technology_icon_constant_recipe_productivity("__secretas__/graphics/technology/productivity-module-4-tech.png"),
+      icon_size = 256,
+      prerequisites = {"planet-discovery-secretas"},
+      effects =
+      {
+          {
+              type = "unlock-recipe",
+              recipe = "productivity-module-4-S",
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "golden-egg",
+          },
+      },
+      unit =
+      {
+        count = 2000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"golden-science-pack", 1}
+        },
+        time = 60
+      }
+    }
+  })
+end
