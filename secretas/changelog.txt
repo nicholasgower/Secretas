@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.21
+Date: 4. 16. 2025
+  Major Features:
+    - Removed gold-plate duplicate entry from factoriopedia, and migrated recipe name.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.20
 Date: 4. 4. 2025
   Major Features:

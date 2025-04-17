@@ -26,11 +26,11 @@ if ((mods["dea-dia-system"] == false or mods["dea-dia-system"] == nil) or settin
           },
           {
               type = "unlock-recipe",
-              recipe = "gold-plate-production"
+              recipe = "gold-plate"
           },
           {
               type = "unlock-recipe",
-              recipe = "gold-plate-production-alt"
+              recipe = "gold-plate-alt"
           },
           {
               type = "unlock-recipe",
@@ -93,11 +93,11 @@ if (mods["dea-dia-system"] and settings.startup["ignore-dea-dia-compatibility"].
           },
           {
               type = "unlock-recipe",
-              recipe = "gold-plate-production"
+              recipe = "gold-plate"
           },
           {
               type = "unlock-recipe",
-              recipe = "gold-plate-production-alt"
+              recipe = "gold-plate-alt"
           },
           {
               type = "unlock-recipe",
@@ -618,12 +618,12 @@ data:extend({
       {
         {
           type = "change-recipe-productivity",
-          recipe = "gold-plate-production",
+          recipe = "gold-plate",
           change = 0.07,
         },
         {
           type = "change-recipe-productivity",
-          recipe = "gold-plate-production-alt",
+          recipe = "gold-plate-alt",
           change = 0.07,
         }
       },

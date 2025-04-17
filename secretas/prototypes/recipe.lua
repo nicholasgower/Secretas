@@ -80,7 +80,7 @@ data:extend(
     },
     {
       type ="recipe",
-      name ="gold-plate-production",
+      name ="gold-plate",
       category ="metallurgy",
       icon ="__secretas__/graphics/icons/gold-plate.png",
       enabled = false,
@@ -102,7 +102,7 @@ data:extend(
     },
     {
       type ="recipe",
-      name ="gold-plate-production-alt",
+      name ="gold-plate-alt",
       category ="smelting",
       icon ="__secretas__/graphics/icons/gold-plate.png",
       enabled = false,
