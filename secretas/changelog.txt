@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.23
+Date: 4. 19. 2025
+  Major Features:
+    - Spaceship-scrap recycling adjusted for Frozeta start experience. Increase Rocket 0.1 --> 0.2 Drop percentage. Even then, we are going to need a large amount of production to get the explosives from rockets to ship to arm railguns.
+    - Spoilage amount increase from 1 to 4, while propability decreased from 0.04 to 0.03. (Every 100 space scrap now gives 12 spoilage, from 3). I want to better incentivise connecting the scrap processing to the biochamber. (Final Frozeta start scenario will include 4 starting biochambers)
+    - Heatpipe drop rate decreased to 0.02, from 0.03. (Starting scenario will be given heatpipes to compensate). 
+    - Regular scrap drop rate increased to 0.11, from 0.10. Every 1000 Spaceship scrap --> 110 scrap --> 6.6 concrete. (From 6 concrete)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.22
+Date: 4. 18. 2025
+  Major Features:
+    - Spaceship-scrap recycling. Ice changed to 0.07 (from 0.05), rocket down to 0.01 (0.02)
+    - I had estimated that 5% ice was enough to run things, but it isn't - at least with boilers. 500C steam would relieve the pressure on water, but that isn't easy on a Frozeta start.
+    - Fixed recycler south animation going haywire. 
+---------------------------------------------------------------------------------------------------
 Version: 1.0.21
 Date: 4. 16. 2025
   Major Features:

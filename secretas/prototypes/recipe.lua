@@ -34,7 +34,7 @@ data:extend(
           {type = "item", name = "steel-plate",            amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
           --11
           {type = "item", name = "battery",                amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "ice",                    amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "ice",                    amount = 1, probability = 0.07, show_details_in_recipe_tooltip = false},
           --10
           {type = "item", name = "iron-gear-wheel",        amount = 1, probability = 0.10, show_details_in_recipe_tooltip = false},
           --15
@@ -53,7 +53,7 @@ data:extend(
           {type = "item", name = "depleted-uranium-fuel-cell",   amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
           --10
           {type = "item", name = "holmium-plate",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "spoilage",   amount = 1, probability = 0.04, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "spoilage",   amount = 4, probability = 0.03, show_details_in_recipe_tooltip = false},
           {type = "item", name = "flying-robot-frame",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "steam-turbine",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "laser-turret",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
@@ -62,7 +62,7 @@ data:extend(
           {type = "item", name = "iron-plate",   amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           {type = "item", name = "pipe",   amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
           {type = "item", name = "storage-tank",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "rocket",   amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "rocket",   amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           --10
           {type = "item", name = "inserter",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "pump",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
@@ -72,9 +72,9 @@ data:extend(
           {type = "item", name = "arithmetic-combinator",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "constant-combinator",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "display-panel",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "heat-pipe",   amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "heat-pipe",   amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           --11
-          {type = "item", name = "scrap",   amount = 1, probability = 0.10, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "scrap",   amount = 1, probability = 0.11, show_details_in_recipe_tooltip = false},
 
         }
     },
