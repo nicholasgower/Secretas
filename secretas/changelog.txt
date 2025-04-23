@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.24
+Date: 4. 22. 2025
+  Major Features:
+    - Gold heat pipe added. Lower specific heat, increased heating_radius compared to standard heat-pipe
+    - Gold railgun turret. Available to make from materials found on Frozeta 
+    - Spaceship scrap map color now yellow
+    - Frozeta start with any planet start mod.
+    - New technology - breed pentapod eggs anywhere.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.23
 Date: 4. 19. 2025
   Major Features:

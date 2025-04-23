@@ -257,10 +257,103 @@ data:extend({
       },
       prerequisites = { "planet-discovery-secretas"}
     },
+    {
+      type = "technology",
+      name = "gold-heat-pipe",
+      icon = "__secretas__/graphics/icons/gold-heat-pipe.png",
+      icon_size = 64,
+      essential = false,
+      effects =
+      {
 
-
+          {
+              type = "unlock-recipe",
+              recipe = "gold-heat-pipe",
+          },
+      },
+      prerequisites = {"planet-discovery-secretas"},
+      unit =
+      {
+        count = 3000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"golden-science-pack", 1}
+        },
+        time = 60
+      }
+    },
+    {
+      type = "technology",
+      name = "gold-railgun-turret",
+      icon = "__secretas__/graphics/technology/gold-railgun.png",
+      icon_size = 256,
+      effects =
+      {
+        {
+          type = "unlock-recipe",
+          recipe = "gold-railgun-turret"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "railgun-ammo"
+        },
+      },
+      prerequisites = {"planet-discovery-secretas","railgun"},
+      unit =
+      {
+        count = 2000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"military-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"production-science-pack", 1},
+          {"cryogenic-science-pack", 1},
+          {"space-science-pack", 1},
+          {"golden-science-pack", 1},
+        },
+        time = 60
+      }
+    },
     --EMPOWER
-
+    {
+      type = "technology",
+      name = "pentapod-egg-unrestricted",
+      icon = "__space-age__/graphics/technology/biochamber.png",
+      icon_size = 256,
+      effects =
+      {
+        {
+          type = "unlock-recipe",
+          recipe = "pentapod-egg-unrestricted"
+        },
+      },
+      prerequisites = {"planet-discovery-secretas"},
+      unit =
+      {
+        count = 2000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"military-science-pack", 1},
+          {"utility-science-pack", 1},
+          {"production-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"space-science-pack", 1},
+          {"golden-science-pack", 1},
+        },
+        time = 60
+      }
+    },
 
     {
       type = "technology",
@@ -470,6 +563,7 @@ data:extend({
       },
       upgrade = true
     },
+
 
     --INFINITE-ISH
 

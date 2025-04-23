@@ -1,4 +1,17 @@
+if (mods["any-planet-start"]) then
+    APS.add_choice("frozeta")
+end
+
+
+
 data:extend({
+    {
+        type = "bool-setting",
+        name = "check-this-if-frozeta-start",
+        setting_type = "startup",
+        default_value = false,
+        --hidden = true, --
+    },
     {
         type = "bool-setting",
         name = "automatically-populate-science-pack-productivity-research",

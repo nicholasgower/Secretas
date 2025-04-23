@@ -22,6 +22,8 @@ data.raw['furnace']['recycler'].result_inventory_size = 40
               },
 --]]
 
+
+
 if(mods["cubium"]) then 
     data:extend(
       {        
