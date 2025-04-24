@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.25
+Date: 4. 24. 2025
+  Major Features:
+    - Frozeta start added concrete to starting item pool, enabled scrap recycling, relaxed biochamber crafting restriction,
+    - Armor given on init() 
+    - burner mining drill heat energy now zero for frozeta start.
+    - APS added as optional dependency. Thanks Code green for the death on platform escape fix. 
+    - Scenarios that start on surface that isn't nauvis should teleport the player during on_player_created() to ensure they don't respawn on nauvis when dying on a space platform.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.24
 Date: 4. 22. 2025
   Major Features:

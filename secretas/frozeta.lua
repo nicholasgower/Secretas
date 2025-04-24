@@ -10,8 +10,17 @@ data.raw.recipe["oxide-asteroid-reprocessing"].enabled = true
 data.raw.recipe["burnt-spoilage"].enabled = true
 data.raw.recipe["cryogenic-plant"].enabled = true
 data.raw.recipe["coal-synthesis"].enabled = true
-
-
+data.raw.recipe["scrap-recycling"].enabled = true
+data.raw.recipe["biochamber"].enabled = true
+data.raw.recipe["biochamber"].surface_conditions = 
+{
+    {
+        property = "pressure",
+        min = 200,
+        max = 2000
+    }
+}
+data.raw["mining-drill"]["burner-mining-drill"].heating_energy = "0kW"
 --data.raw.recipe["pumpjack"].enabled = true
 
 local logistic_science = {"automation-science-pack", "logistic-science-pack"}

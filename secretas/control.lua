@@ -22,13 +22,14 @@ script.on_init(function()
         ["biochamber"] = 5,
         ["uranium-235"] = 50,
         ["heavy-oil-barrel"] = 1,
+        ["concrete"] = 100,
     })
     remote.call("freeplay", "set_debris_items", {
         ["iron-plate"] = 50,
         ["copper-plate"] = 50,
     })
-    --local player = game.players[event.player_index]
 
+    
 
 end)
 
