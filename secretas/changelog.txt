@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.26
+Date: 5. 1. 2025
+  Major Features:
+    - Ensure changes have actually been pushed to main. 
+    - Updated start scenario so oil-processing is not a trigger tech
+---------------------------------------------------------------------------------------------------
 Version: 1.0.25
 Date: 4. 24. 2025
   Major Features:

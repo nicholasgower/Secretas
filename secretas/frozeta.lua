@@ -32,6 +32,7 @@ local golden_science_military = {"automation-science-pack","logistic-science-pac
 utils.set_packs("fluid-handling", automation_science, 10, 30)
 utils.set_packs("coal-liquefaction", logistic_science, 100, 30)
 utils.set_packs("oil-gathering", automation_science, 100, 30)
+utils.set_packs("oil-processing", automation_science, 100, 30)
 utils.set_packs("advanced-oil-processing", logistic_science, 100, 30)
 utils.set_packs("sulfur-processing", logistic_science, 100, 30)
 utils.set_prerequisites("gold-railgun-turret",{"planet-discovery-secretas"})
