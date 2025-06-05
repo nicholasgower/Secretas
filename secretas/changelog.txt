@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.28
+Date: 6. 5. 2025
+  Major Features:
+    - Hopefully fixed an issue with redrawn space connections and didn't explode everything
+---------------------------------------------------------------------------------------------------
 Version: 1.0.27
 Date: 6. 2. 2025
   Major Features:
