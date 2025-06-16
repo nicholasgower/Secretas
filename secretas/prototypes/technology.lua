@@ -20,30 +20,7 @@ if ((mods["dea-dia-system"] == false or mods["dea-dia-system"] == nil) or settin
               space_location = "frozeta",
               use_icon_overlay_constant = true
           },
-          {
-              type = "unlock-recipe",
-              recipe = "spaceship-scrap-recycling",
-          },
-          {
-              type = "unlock-recipe",
-              recipe = "gold-plate"
-          },
-          {
-              type = "unlock-recipe",
-              recipe = "gold-plate-alt"
-          },
-          {
-              type = "unlock-recipe",
-              recipe = "auric-asteroid-crushing"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "solid-fuel-liquefaction"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "golden-egg"
-          },
+
 
       },
       prerequisites = {"planet-discovery-aquilo","cryogenic-science-pack"},
@@ -87,30 +64,7 @@ if (mods["dea-dia-system"] and settings.startup["ignore-dea-dia-compatibility"].
               space_location = "frozeta",
               use_icon_overlay_constant = true
           },
-          {
-              type = "unlock-recipe",
-              recipe = "spaceship-scrap-recycling",
-          },
-          {
-              type = "unlock-recipe",
-              recipe = "gold-plate"
-          },
-          {
-              type = "unlock-recipe",
-              recipe = "gold-plate-alt"
-          },
-          {
-              type = "unlock-recipe",
-              recipe = "auric-asteroid-crushing"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "solid-fuel-liquefaction"
-          },
-          {
-            type = "unlock-recipe",
-            recipe = "golden-egg"
-          },
+
 
       },
       prerequisites = {"planet-discovery-aquilo","cryogenic-science-pack"},
@@ -227,6 +181,30 @@ data:extend({
           {
               type = "unlock-recipe",
               recipe = "steam-recycler"
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "gold-plate"
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "gold-plate-alt"
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "auric-asteroid-crushing"
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "solid-fuel-liquefaction"
+          },
+          {
+            type = "unlock-recipe",
+            recipe = "golden-egg"
+          },
+          {
+              type = "unlock-recipe",
+              recipe = "spaceship-scrap-recycling",
           },
       },
       research_trigger =

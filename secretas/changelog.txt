@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.29
+Date: 6. 6. 2025
+  Major Features:
+    - Moved recipes unlocked from planet discovery to the trigger tech steam recycler. This ensures you have to pland on the planet to get the technologies.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.28
 Date: 6. 5. 2025
   Major Features:
