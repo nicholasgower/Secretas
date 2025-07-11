@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.30
+Date: 7. 10. 2025
+  Major Features:
+    - Thanks Meteor swarm for a PR that fixes compatibility for 2.0.59 while not breaking current versions. Thanks so much!
+---------------------------------------------------------------------------------------------------
 Version: 1.0.29
 Date: 6. 6. 2025
   Major Features:
