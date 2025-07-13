@@ -20,7 +20,6 @@ data:extend(
     sound = "__space-age__/sound/ambient/aquilo/aquilo-2.ogg",
     weight = 10
   },
-  --[[
   {
     type = "ambient-sound",
     name = "frozeta-3",
@@ -29,7 +28,6 @@ data:extend(
     sound = "__space-age__/sound/ambient/aquilo/aquilo-3.ogg",
     weight = 10
   },
-  --]]
   {
     type = "ambient-sound",
     name = "frozeta-4",
