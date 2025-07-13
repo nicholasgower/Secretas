@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.31
+Date: 7. 11. 2025
+  Major Features:
+    - Fix needs more work. I don't have time, but I can disable to problematic soundtrack in all versions of Factorio. 
+---------------------------------------------------------------------------------------------------
 Version: 1.0.30
 Date: 7. 10. 2025
   Major Features:
