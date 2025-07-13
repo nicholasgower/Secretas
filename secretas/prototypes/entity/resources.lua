@@ -72,7 +72,7 @@ data:extend({
         {
           name = "spaceship-scrap",
           order = "c",
-          map_color = {0.6, 0.6, 0.6},
+          map_color = {250, 255, 164},
           mining_time = 0.5,
           walking_sound = sounds.ore,
           resource_patch_search_radius = 15,

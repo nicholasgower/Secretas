@@ -26,3 +26,12 @@ require("__secretas__.prototypes.achievements")
 --Populating utility constant default max belt stack size so mods that looks for it have the correct stack size
 local defaultmaxbelt = data.raw["utility-constants"]["default"].max_belt_stack_size or 4
 data.raw["utility-constants"]["default"].max_belt_stack_size = defaultmaxbelt +1
+
+
+if (mods["any-planet-start"] and settings.startup["ignore-dea-dia-compatibility"].value == true) then
+    APS.add_planet{name = "frozeta", filename = "__secretas__/frozeta.lua", technology = "planet-discovery-secretas"}
+end
+
+if (mods["any-planet-start"] and settings.startup["ignore-dea-dia-compatibility"].value == false and mods["dea-dia-system"]) then
+    APS.add_planet{name = "frozeta", filename = "__secretas__/frozeta.lua", technology = "planet-discovery-frozeta"}
+end

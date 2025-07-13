@@ -34,7 +34,7 @@ data:extend(
           {type = "item", name = "steel-plate",            amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
           --11
           {type = "item", name = "battery",                amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "ice",                    amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "ice",                    amount = 1, probability = 0.07, show_details_in_recipe_tooltip = false},
           --10
           {type = "item", name = "iron-gear-wheel",        amount = 1, probability = 0.10, show_details_in_recipe_tooltip = false},
           --15
@@ -53,7 +53,7 @@ data:extend(
           {type = "item", name = "depleted-uranium-fuel-cell",   amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
           --10
           {type = "item", name = "holmium-plate",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "spoilage",   amount = 1, probability = 0.04, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "spoilage",   amount = 4, probability = 0.03, show_details_in_recipe_tooltip = false},
           {type = "item", name = "flying-robot-frame",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "steam-turbine",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "laser-turret",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
@@ -62,7 +62,7 @@ data:extend(
           {type = "item", name = "iron-plate",   amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           {type = "item", name = "pipe",   amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
           {type = "item", name = "storage-tank",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "rocket",   amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "rocket",   amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           --10
           {type = "item", name = "inserter",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "pump",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
@@ -72,15 +72,15 @@ data:extend(
           {type = "item", name = "arithmetic-combinator",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "constant-combinator",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
           {type = "item", name = "display-panel",   amount = 1, probability = 0.01, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "heat-pipe",   amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "heat-pipe",   amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false},
           --11
-          {type = "item", name = "scrap",   amount = 1, probability = 0.10, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "scrap",   amount = 1, probability = 0.11, show_details_in_recipe_tooltip = false},
 
         }
     },
     {
       type ="recipe",
-      name ="gold-plate-production",
+      name ="gold-plate",
       category ="metallurgy",
       icon ="__secretas__/graphics/icons/gold-plate.png",
       enabled = false,
@@ -102,7 +102,7 @@ data:extend(
     },
     {
       type ="recipe",
-      name ="gold-plate-production-alt",
+      name ="gold-plate-alt",
       category ="smelting",
       icon ="__secretas__/graphics/icons/gold-plate.png",
       enabled = false,
@@ -385,5 +385,87 @@ data:extend(
       subgroup = "fluid-recipes",
       order = "a[oil-processing]-c[solid-fuel-liquefaction]",
       allow_decomposition = false
+    },
+    {
+      type ="recipe",
+      name ="gold-heat-pipe",
+      category = "metallurgy-or-assembling",
+      icon ="__secretas__/graphics/icons/gold-heat-pipe.png",
+      enabled = false,
+      ingredients =
+      {
+        {type ="item", name ="gold-plate", amount = 20},
+        {type ="item", name ="tungsten-plate", amount = 1},
+        {type ="item", name ="steel-plate", amount = 9},
+
+      },
+
+      energy_required = 3,
+      results =
+      {
+        {type ="item", name ="gold-heat-pipe", amount = 1},
+
+      },
+      allow_quality = true,
+      main_product ="gold-heat-pipe",
+    },
+    {
+      type = "recipe",
+      name = "gold-railgun-turret",
+      category = "cryogenics",
+      enabled = false,
+      energy_required = 30,
+      ingredients =
+      {
+        {type = "item", name = "arithmetic-combinator", amount = 20},
+        {type = "item", name = "decider-combinator", amount = 20},
+        {type = "item", name = "constant-combinator", amount = 1},
+        {type = "item", name = "copper-cable", amount = 100},
+        {type = "item", name = "processing-unit", amount = 20},
+        {type = "item", name = "tungsten-plate", amount = 35},
+        {type = "item", name = "superconductor", amount = 50},
+        {type = "item", name = "carbon-fiber", amount = 20},
+        {type = "item", name = "gold-plate", amount = 200},
+        {type = "item", name = "electric-engine-unit", amount = 400},
+        {type = "fluid", name = "lubricant", amount = 100}
+      },
+      results = {{type="item", name="gold-railgun-turret", amount=1}},
+      crafting_machine_tint =
+      {
+        primary = {r = 0.504, g = 0.448, b = 0.321, a = 1.000}, -- #807251ff
+        secondary = {r = 143, g = 153, b = 79, a = 1.000}, --rgb(143, 153, 79)
+        tertiary = {r = 199, g = 224, b = 102, a = 1.000}, --rgb(199, 224, 102)
+        quaternary = {r = 0.246, g = 0.246, b = 0.246, a = 1.000}, -- #3e3e3eff
+      }
+    },
+
+    {
+      type = "recipe",
+      name = "pentapod-egg-unrestricted",
+      icon = "__space-age__/graphics/icons/pentapod-egg-3.png",
+      category = "organic",
+      subgroup = "agriculture-processes",
+      order = "d[organic-processing]-b[pentapod-egg]",
+      auto_recycle = false,
+      enabled = false,
+      allow_productivity = true,
+      result_is_always_fresh = true,
+      hide_from_signal_gui = true,
+      energy_required = 60,
+      ingredients =
+      {
+        {type = "item", name = "pentapod-egg", amount = 1, ignored_by_stats = 1},
+        {type = "item", name = "nutrients", amount = 60},
+        {type = "fluid", name = "water", amount = 150}
+      },
+      results =
+      {
+        {type = "item", name = "pentapod-egg", amount = 2, ignored_by_stats = 1, ignored_by_productivity = 1}
+      },
+      crafting_machine_tint =
+      {
+        primary = {r = 45, g = 129, b = 86, a = 1.000},
+        secondary = {r = 122, g = 75, b = 156, a = 1.000},
+      }
     },
 })

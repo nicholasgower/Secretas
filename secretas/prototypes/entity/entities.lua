@@ -12,7 +12,66 @@ local meld = require("meld")
 --local procession_graphic_catalogue_types = require("__base__/prototypes/planet/procession-graphic-catalogue-types")
 --local biochamber_pictures = require("__space-age__.prototypes.entity.biochamber-pictures")
 
-data:extend({ --TODO figure out how to manage inserter stack size with tech.
+function make_rotated_animation_variations_from_sheet(variation_count, sheet) --makes remnants work with more than 1 variation
+  local result = {}
+
+  local function set_y_offset(variation, i)
+    local frame_count = variation.frame_count or 1
+    local line_length = variation.line_length or frame_count
+    if (line_length < 1) then
+      line_length = frame_count
+    end
+
+    local height_in_frames = math.floor((frame_count * variation.direction_count + line_length - 1) / line_length)
+    -- if (height_in_frames ~= 1) then
+    --   log("maybe broken sheet: h=" .. height_in_frames .. ", vc=" .. variation_count .. ", " .. variation.filename)
+    -- end
+    variation.y = variation.height * (i - 1) * height_in_frames
+  end
+
+  for i = 1,variation_count do
+    local variation = util.table.deepcopy(sheet)
+
+    if variation.layers then
+      for _, layer in pairs(variation.layers) do
+        set_y_offset(layer, i)
+      end
+    else
+      set_y_offset(variation, i)
+    end
+
+    table.insert(result, variation)
+  end
+ return result
+end
+
+function make_heat_pipe_pictures(path, name_prefix, data, draw_as_glow)
+  local all_pictures = {}
+  local func = draw_as_glow and apply_heat_pipe_glow or function(t) return t end
+  for key, t in pairs(data) do
+    if t.empty then
+      all_pictures[key] = { priority = "extra-high", filename = "__core__/graphics/empty.png", width = 1, height = 1 }
+    else
+      local tile_pictures = {}
+      for i = 1, (t.variations or 1) do
+        local sprite = func
+        {
+          priority = "extra-high",
+          filename = path .. name_prefix .. "-" .. (t.name or string.gsub(key, "_", "-")) .. (t.ommit_number and ".png" or ("-" .. tostring(i) .. ".png")),
+          width = (t.width or 32) * 2,
+          height = (t.height or 32) * 2,
+          scale = 0.5,
+          shift = t.shift
+        }
+        table.insert(tile_pictures, sprite)
+      end
+      all_pictures[key] = tile_pictures
+    end
+  end
+  return all_pictures
+end
+
+data:extend({ 
     {
         type = "inserter",
         name = "hyper-inserter",
@@ -219,12 +278,12 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
           pipe_connections =
           {
               {
-              flow_direction="output", --only one that seems to be working.
+              flow_direction="output", 
               direction = defines.direction.west,
-              position = {-0.5, 0.5}, --0.45,1.2 x looks decent
+              position = {-0.5, 0.5}, 
               },
               {
-                flow_direction="output", --only one that seems to be working.
+                flow_direction="input", 
                 direction = defines.direction.east,
                 position = {0.5, 0.5},
               },
@@ -234,7 +293,7 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
                 position = {-0.5, -0.5}, 
               },
               {
-                flow_direction="input", 
+                flow_direction="output", 
                 direction = defines.direction.east,
                 position = {0.5, -0.5},
               },
@@ -255,5 +314,301 @@ data:extend({ --TODO figure out how to manage inserter stack size with tech.
       graphics_set          = require("__secretas__.prototypes.entity.recycler-pictures").graphics_set,
       graphics_set_flipped  = require("__secretas__.prototypes.entity.recycler-pictures").graphics_set_flipped,
       cant_insert_at_source_message_key = "inventory-restriction.cant-be-recycled"
-    }
+    },
+    {
+      type = "corpse",
+      name = "gold-heat-pipe-remnants",
+      icon = "__secretas__/graphics/icons/gold-heat-pipe.png",
+      flags = {"placeable-neutral", "not-on-map"},
+      hidden_in_factoriopedia = true,
+      subgroup = "energy-remnants",
+      order = "a-f-a",
+      selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+      tile_width = 1,
+      tile_height = 1,
+      selectable_in_game = false,
+      time_before_removed = 60 * 60 * 15, -- 15 minutes
+      expires = false,
+      final_render_layer = "remnants",
+      remove_on_tile_placement = false,
+      animation = make_rotated_animation_variations_from_sheet (6,
+      {
+        filename = "__secretas__/graphics/entity/heat-pipe/remnants/heat-pipe-remnants.png",
+        line_length = 1,
+        width = 122,
+        height = 100,
+        direction_count = 2,
+        shift = util.by_pixel(0.5, -1.5),
+        scale = 0.5
+      })
+    },
+    {
+      type = "heat-pipe",
+      name = "gold-heat-pipe",
+      icon = "__secretas__/graphics/icons/gold-heat-pipe.png",
+      flags = {"placeable-neutral", "player-creation"},
+      minable = {mining_time = 0.1, result = "gold-heat-pipe"},
+      fast_replaceable_group = "heat-pipe",
+      max_health = 200,
+      corpse = "gold-heat-pipe-remnants",
+      dying_explosion = "heat-pipe-explosion",
+      random_corpse_variation = true,
+      heating_radius = 2,
+      working_sound =
+      {
+        sound = { filename = "__base__/sound/heat-pipe.ogg", volume = 0.4 },
+        match_volume_to_activity = true,
+        max_sounds_per_prototype = 3,
+        fade_in_ticks = 4,
+        fade_out_ticks = 20
+      },
+      impact_category = "metal",
+      resistances =
+      {
+        {
+          type = "fire",
+          percent = 90
+        },
+        {
+          type = "explosion",
+          percent = 30
+        },
+        {
+          type = "impact",
+          percent = 30
+        }
+      },
+      collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
+      selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+      damaged_trigger_effect = hit_effects.entity(),
+      heat_buffer =
+      {
+        max_temperature = 1000,
+        specific_heat = "0.6MJ",
+        max_transfer = "0.9GW",
+        minimum_glow_temperature = 350,
+        connections =
+        {
+          {
+            position = {0, 0},
+            direction = defines.direction.north
+          },
+          {
+            position = {0, 0},
+            direction = defines.direction.east
+          },
+          {
+            position = {0, 0},
+            direction = defines.direction.south
+          },
+          {
+            position = {0, 0},
+            direction = defines.direction.west
+          }
+        }
+      },
+  
+      connection_sprites = make_heat_pipe_pictures("__secretas__/graphics/entity/heat-pipe/", "heat-pipe",
+      {
+        single = { name = "straight-vertical-single", ommit_number = true },
+        straight_vertical = { variations = 6 },
+        straight_horizontal = { variations = 6 },
+        corner_right_up = { name = "corner-up-right", variations = 6 },
+        corner_left_up = { name = "corner-up-left", variations = 6 },
+        corner_right_down = { name = "corner-down-right", variations = 6 },
+        corner_left_down = { name = "corner-down-left", variations = 6 },
+        t_up = {},
+        t_down = {},
+        t_right = {},
+        t_left = {},
+        cross = { name = "t" },
+        ending_up = {},
+        ending_down = {},
+        ending_right = {},
+        ending_left = {}
+      }),
+  
+      heat_glow_sprites = make_heat_pipe_pictures("__secretas__/graphics/entity/heat-pipe/", "heated",
+      {
+        single = { empty = true },
+        straight_vertical = { variations = 6 },
+        straight_horizontal = { variations = 6 },
+        corner_right_up = { name = "corner-up-right", variations = 6 },
+        corner_left_up = { name = "corner-up-left", variations = 6 },
+        corner_right_down = { name = "corner-down-right", variations = 6 },
+        corner_left_down = { name = "corner-down-left", variations = 6 },
+        t_up = {},
+        t_down = {},
+        t_right = {},
+        t_left = {},
+        cross = { name = "t" },
+        ending_up = {},
+        ending_down = {},
+        ending_right = {},
+        ending_left = {}
+      }, true)
+    },
+    {
+      type = "corpse",
+      name = "gold-railgun-turret-remnants",
+      icon = "__secretas__/graphics/icons/gold-railgun-turret.png",
+      flags = {"placeable-neutral", "not-on-map"},
+      hidden_in_factoriopedia = true,
+      subgroup = "defensive-structure-remnants",
+      order = "a-c-a",
+      selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+      tile_width = 3,
+      tile_height = 3,
+      selectable_in_game = false,
+      time_before_removed = 60 * 60 * 15, -- 15 minutes
+      expires = false,
+      final_render_layer = "remnants",
+      remove_on_tile_placement = false,
+      animation = make_rotated_animation_variations_from_sheet (3,
+      {
+        layers =
+        {
+          util.sprite_load("__secretas__/graphics/entity/railgun-turret/railgun-turret-remnants",
+          {
+            line_length = 1,
+            direction_count = 1,
+            shift = util.by_pixel(0, 0),
+            scale = 0.5
+          }),
+          util.sprite_load("__space-age__/graphics/entity/railgun-turret/remnants/railgun-turret-remnants-mask",
+          {
+            priority = "low",
+            line_length = 1,
+            apply_runtime_tint = true,
+            direction_count = 1,
+            shift = util.by_pixel(0, 0),
+            scale = 0.5
+          })
+        }
+      })
+    },
+    {
+      type = "ammo-turret",
+      name = "gold-railgun-turret",
+      icon = "__secretas__/graphics/icons/gold-railgun-turret.png",
+      flags = {"placeable-player", "player-creation", "building-direction-8-way"},
+      minable = {mining_time = 0.5, result = "gold-railgun-turret"},
+      max_health = 4000,
+      corpse = "gold-railgun-turret-remnants",
+      dying_explosion = "gun-turret-explosion",
+      collision_box = {{-1.41, -1.9 }, {1.41, 2.1}},
+      selection_box = {{-1.5, -2.5 }, {1.5, 2.5}},
+      energy_source =
+      {
+        type = "electric",
+        buffer_capacity = "21MJ",
+        input_flow_limit = "7MW",
+        usage_priority = "primary-input"
+      },
+      energy_per_shot = "10MJ",
+      tile_height = 5,
+      turret_base_has_direction = true,
+      allow_turning_when_starting_attack = true,
+      prepare_with_no_ammo = false,
+      damaged_trigger_effect = hit_effects.entity(),
+      heating_energy = "65kW",
+      rotation_speed = 0.003,
+      preparing_speed = 0.03,
+      preparing_sound = space_age_sounds.railgun_turret_activate,
+      folding_sound = space_age_sounds.railgun_turret_deactivate,
+      rotating_sound = space_age_sounds.railgun_turret_rotate,
+      automated_ammo_count = 21,
+      inventory_size = 1,
+      folding_speed = 0.035,
+      attacking_speed = 0.32,
+      starting_attack_speed = 0.015,
+      ending_attack_speed = 0.04,
+      alert_when_attacking = true,
+      can_retarget_while_starting_attack = true,
+      circuit_connector = circuit_connector_definitions["railgun-turret"],
+      circuit_wire_max_distance = default_circuit_wire_max_distance,
+      open_sound = sounds.turret_open,
+      close_sound = sounds.turret_close,
+      graphics_set =
+      {
+        base_visualisation =
+        {
+          animation = require("__secretas__.prototypes.entity.railgun-turret-pictures").base_picture
+        }
+      },
+      preparing_animation = require("__secretas__.prototypes.entity.railgun-turret-pictures").neutral_animation,
+      prepared_animation = require("__secretas__.prototypes.entity.railgun-turret-pictures").aiming_animation,
+      starting_attack_animation = require("__secretas__.prototypes.entity.railgun-turret-pictures").warmup_animation,
+      attacking_animation = require("__secretas__.prototypes.entity.railgun-turret-pictures").shooting_animation,
+      ending_attack_animation = require("__secretas__.prototypes.entity.railgun-turret-pictures").cooldown_animation,
+      folding_animation = require("__secretas__.prototypes.entity.railgun-turret-pictures").neutral_animation,
+      folded_animation = require("__secretas__.prototypes.entity.railgun-turret-pictures").neutral_animation,
+      resource_indicator_animation = require("__secretas__.prototypes.entity.railgun-turret-pictures").resource_indicator_animation,
+      special_effect =
+      {
+        type = "mask-by-circle",
+        center =
+        {
+          default = {0, 0},
+          south = {0.06, -0.65},
+          south_east = {0.33, -1.06},
+          south_west = {-0.27, -0.87},
+          north = {-0.06, -1.22},
+          north_east = {0.22, -1.51},
+          north_west = {-0.22, -1.34},
+          west = {-0.33, -1.1},
+          east = {0.45, -1.17}
+        },
+        min_radius = 0,
+        max_radius = 2.00,
+        falloff = 0.25,
+        attacking_min_radius = 0,  -- negative values mask out inside of the circle (positive values mask out outside)
+        attacking_max_radius = -2.00,
+        attacking_falloff = 0.75,
+      },
+  
+      attack_parameters =
+      {
+        type = "projectile",
+        ammo_category = "railgun",--railgun ammo prototype details the damage.
+        health_penalty = -1,
+        cooldown = 120,
+        projectile_creation_distance = 3.6,
+        projectile_center = {0, 0},
+        apply_projection_to_projectile_creation_position = false,
+        shell_particle =
+        {
+          name = "railgun-shell-particle",
+          direction_deviation = 0.1,
+          speed = 0.1,
+          speed_deviation = 0.03,
+          center = {0, 0},
+          creation_distance = -6,
+          starting_frame_speed = 0.2,
+          starting_frame_speed_deviation = 0.1
+        },
+        min_range = 1.5,
+        range = 30,
+        turn_range = 0.20,
+        sound = space_age_sounds.railgun_turret_gunshot,
+        true_collinear_ejection = true
+      },
+  
+      call_for_help_radius = 40,
+      water_reflection =
+      {
+        pictures =
+        {
+          filename = "__base__/graphics/entity/gun-turret/gun-turret-reflection.png",
+          priority = "extra-high",
+          width = 20,
+          height = 32,
+          shift = util.by_pixel(0, 40),
+          variation_count = 1,
+          scale = 5
+        },
+        rotate = false,
+        orientation_to_variation = false
+      }
+    },
 })

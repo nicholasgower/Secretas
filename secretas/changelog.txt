@@ -1,4 +1,91 @@
- ---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Version: 1.0.31
+Date: 7. 11. 2025
+  Major Features:
+    - Fix needs more work. I don't have time, but I can disable to problematic soundtrack in all versions of Factorio. 
+---------------------------------------------------------------------------------------------------
+Version: 1.0.30
+Date: 7. 10. 2025
+  Major Features:
+    - Thanks Meteor swarm for a PR that fixes compatibility for 2.0.59 while not breaking current versions. Thanks so much!
+---------------------------------------------------------------------------------------------------
+Version: 1.0.29
+Date: 6. 6. 2025
+  Major Features:
+    - Moved recipes unlocked from planet discovery to the trigger tech steam recycler. This ensures you have to pland on the planet to get the technologies.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.28
+Date: 6. 5. 2025
+  Major Features:
+    - Hopefully fixed an issue with redrawn space connections and didn't explode everything
+---------------------------------------------------------------------------------------------------
+Version: 1.0.27
+Date: 6. 2. 2025
+  Major Features:
+    - Fixed typo in localization.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.26
+Date: 5. 1. 2025
+  Major Features:
+    - Ensure changes have actually been pushed to main. 
+    - Updated start scenario so oil-processing is not a trigger tech
+---------------------------------------------------------------------------------------------------
+Version: 1.0.25
+Date: 4. 24. 2025
+  Major Features:
+    - Frozeta start added concrete to starting item pool, enabled scrap recycling, relaxed biochamber crafting restriction,
+    - Armor given on init() 
+    - burner mining drill heat energy now zero for frozeta start.
+    - APS added as optional dependency. Thanks Code green for the death on platform escape fix. 
+    - Scenarios that start on surface that isn't nauvis should teleport the player during on_player_created() to ensure they don't respawn on nauvis when dying on a space platform.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.24
+Date: 4. 22. 2025
+  Major Features:
+    - Gold heat pipe added. Lower specific heat, increased heating_radius compared to standard heat-pipe
+    - Gold railgun turret. Available to make from materials found on Frozeta 
+    - Spaceship scrap map color now yellow
+    - Frozeta start with any planet start mod.
+    - New technology - breed pentapod eggs anywhere.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.23
+Date: 4. 19. 2025
+  Major Features:
+    - Spaceship-scrap recycling adjusted for Frozeta start experience. Increase Rocket 0.1 --> 0.2 Drop percentage. Even then, we are going to need a large amount of production to get the explosives from rockets to ship to arm railguns.
+    - Spoilage amount increase from 1 to 4, while propability decreased from 0.04 to 0.03. (Every 100 space scrap now gives 12 spoilage, from 3). I want to better incentivise connecting the scrap processing to the biochamber. (Final Frozeta start scenario will include 4 starting biochambers)
+    - Heatpipe drop rate decreased to 0.02, from 0.03. (Starting scenario will be given heatpipes to compensate). 
+    - Regular scrap drop rate increased to 0.11, from 0.10. Every 1000 Spaceship scrap --> 110 scrap --> 6.6 concrete. (From 6 concrete)
+---------------------------------------------------------------------------------------------------
+Version: 1.0.22
+Date: 4. 18. 2025
+  Major Features:
+    - Spaceship-scrap recycling. Ice changed to 0.07 (from 0.05), rocket down to 0.01 (0.02)
+    - I had estimated that 5% ice was enough to run things, but it isn't - at least with boilers. 500C steam would relieve the pressure on water, but that isn't easy on a Frozeta start.
+    - Fixed recycler south animation going haywire. 
+---------------------------------------------------------------------------------------------------
+Version: 1.0.21
+Date: 4. 16. 2025
+  Major Features:
+    - Removed gold-plate duplicate entry from factoriopedia, and migrated recipe name.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.20
+Date: 4. 4. 2025
+  Major Features:
+    - Data updates final fixes now ensures Maraxis science packs are excluded from science pack productivity, thanks Pthread-create
+    - Steam recycler crafting locked to Frozeta by default, this can be adjusted in the mod settings. Was informed this would make gameplay more fun,as now you have a building to automate on Frozeta
+    - Steam recycler fluid boxes adjusted. Original solution was to have pipes between each one, but it turns out reverse tiling them was broken. Now you can easily have steam pass through from one recycler to another without pipes inbetween
+    - Split module finale into its own technologies. This helps accomodate players who use technology science multipliers. This behavior can be reverted with a new mod setting, such that you don't have to adjust your saves.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.19
+Date: 3. 22. 2025
+  Major Features:
+    - Boilerplate code for dea-dia compatibility
+    - Cubium compatibility: Dream recipe for golden science. Cubic science pack recipes now buffed by science pack productivity
+    - Science pack productivity - golden science 0.005 to 0.01. Game was rounding 0.005 to 0
+    - Golden science now has its own trigger technology. Craft 20 golden plates.
+    - Mod setting to disable all compatibility code with dea-dia (except control code) even if dea-dia is installed. This is default to true until the integration and testing is complete.
+    - When integration is complete, I can just flip a switch. In the meantime, I can push out whatever patches I want and not worry about breaking dea-dia.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.18
 Date: 3. 3. 2025
   Major Features:
