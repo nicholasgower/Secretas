@@ -28,6 +28,7 @@ data:extend(
     sound = "__space-age__/sound/ambient/aquilo/aquilo-3.ogg",
     weight = 10
   },
+  --[[
   {
     type = "ambient-sound",
     name = "frozeta-4",
@@ -36,6 +37,7 @@ data:extend(
     sound = "__space-age__/sound/ambient/aquilo/aquilo-4.ogg",
     weight = 10
   },
+  --]]
   require("__space-age__/sound/ambient/aquilo/aquilo-5/aquilo-5"),
   {
     type = "ambient-sound",
@@ -71,9 +73,10 @@ data:extend(
 -------------------------------------------------------------------------------------SPACE
 
 })
-
+--[[
 local hero_sound = data.raw["ambient-sound"]["frozeta-4-hero"]
 
 if helpers.compare_versions(helpers.game_version,"2.0.59") > -1 then
   hero_sound.sound = "__space-age__/sound/ambient/aquilo/aquilo-3-hero.ogg"
 end
+--]]
