@@ -89,3 +89,35 @@ if(settings.startup["restrict-steam-recycler-crafting-to-frozeta"].value) then
     }
 
 end
+
+if(mods["no-quality"]) then
+	data.raw.module["quality-module-4-S"] = nil
+
+	data.raw.recipe["quality-module-4-S-recycling"] = nil
+	data.raw.recipe["quality-module-4-S"] = nil
+	data.raw["produce-achievement"]["crafting-with-hyper-quality"] = nil
+
+	if(settings.startup["condense-level-4-modules-into-one-technology"].value) then
+		data.raw.technology["module-finale"].effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "productivity-module-4-S",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "efficiency-module-4-S",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "speed-module-4-S",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "golden-egg",
+			},
+		}
+	else
+		data.raw.technology["quality-module-4-S"] = nil
+	end
+end
