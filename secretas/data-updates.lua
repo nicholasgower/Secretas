@@ -30,7 +30,7 @@ if(mods["cubium"]) then
         {
             type ="recipe",
             name ="golden-science-pack-cubic",
-            category ="crafting-with-fluid-or-metallurgy",
+            categories ={"crafting-with-fluid","metallurgy"},
             icon ="__secretas__/graphics/icons/golden-science-pack.png",
             subgroup = "cubic",
             icons = 
@@ -67,7 +67,7 @@ if(mods["cubium"]) then
             results =
             {
               {type ="item", name ="golden-science-pack", amount = 16},
-              {type ="item", name ="golden-science-pack", amount = 2, probability = 0.652},
+              {type ="item", name ="golden-science-pack", amount = 2, independent_probability= 0.652},
               {type = "item", name = "dormant-microcube",                amount = 1,  percent_spoiled = 0, ignored_by_productivity = 9999, show_details_in_recipe_tooltip = false},
             },
             allow_productivity = true,

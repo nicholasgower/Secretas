@@ -22,6 +22,7 @@ require("__secretas__.prototypes.planet.frozeta-expressions")
 --require("__secretas__.prototypes.frozeta-decoratives")
 require("__secretas__.prototypes.ambient-sounds")
 require("__secretas__.prototypes.achievements")
+require("__secretas__.prototypes.planet.platform-backdrop")
 
 --Populating utility constant default max belt stack size so mods that looks for it have the correct stack size
 local defaultmaxbelt = data.raw["utility-constants"]["default"].max_belt_stack_size or 4

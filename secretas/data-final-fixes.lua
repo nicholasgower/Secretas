@@ -90,7 +90,7 @@ if(settings.startup["restrict-steam-recycler-crafting-to-frozeta"].value) then
 
 end
 
-if(mods["no-quality"]) then
+if(mods["no-quality"] or not mods["quality"] ) then
 	data.raw.module["quality-module-4-S"] = nil
 
 	data.raw.recipe["quality-module-4-S-recycling"] = nil

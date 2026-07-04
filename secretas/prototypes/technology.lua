@@ -210,7 +210,8 @@ data:extend({
       research_trigger =
       {
           type = "mine-entity",
-          entity = "spaceship-scrap"
+          --entity = "spaceship-scrap" -- In 2.1 entity changed to entities.
+          entities = {"spaceship-scrap"},
       },
       prerequisites = { "planet-discovery-secretas"}
     },

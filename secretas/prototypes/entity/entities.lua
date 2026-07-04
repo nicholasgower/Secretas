@@ -234,15 +234,15 @@ data:extend({
       impact_category = "metal",
       working_sound =
       {
-        sound = { filename = "__quality__/sound/recycler/recycler-loop.ogg", volume = 0.7 },
+        sound = { filename = "__recycler__/sound/recycler/recycler-loop.ogg", volume = 0.7 },
         sound_accents =
         {
-          { sound = { variations = sound_variations("__quality__/sound/recycler/recycler-jaw-move", 5, 0.45 )}, frame = 14, audible_distance_modifier = 0.2 },
-          { sound = { variations = sound_variations("__quality__/sound/recycler/recycler-vox", 5, 0.2 )}, frame = 20, audible_distance_modifier = 0.3 },
-          { sound = { variations = sound_variations("__quality__/sound/recycler/recycler-mechanic", 3, 0.3 )}, frame = 45, audible_distance_modifier = 0.3 },
-          { sound = { variations = sound_variations("__quality__/sound/recycler/recycler-jaw-move", 5, 0.45 )}, frame = 60, audible_distance_modifier = 0.2 },
-          { sound = { variations = sound_variations("__quality__/sound/recycler/recycler-trash", 5, 0.6 )}, frame = 61, audible_distance_modifier = 0.3 },
-          { sound = { variations = sound_variations("__quality__/sound/recycler/recycler-jaw-shut", 6, 0.3 )}, frame = 63, audible_distance_modifier = 0.6 },
+          { sound = { variations = sound_variations("__recycler__/sound/recycler/recycler-jaw-move", 5, 0.45 )}, frame = 14, audible_distance_modifier = 0.2 },
+          { sound = { variations = sound_variations("__recycler__/sound/recycler/recycler-vox", 5, 0.2 )}, frame = 20, audible_distance_modifier = 0.3 },
+          { sound = { variations = sound_variations("__recycler__/sound/recycler/recycler-mechanic", 3, 0.3 )}, frame = 45, audible_distance_modifier = 0.3 },
+          { sound = { variations = sound_variations("__recycler__/sound/recycler/recycler-jaw-move", 5, 0.45 )}, frame = 60, audible_distance_modifier = 0.2 },
+          { sound = { variations = sound_variations("__recycler__/sound/recycler/recycler-trash", 5, 0.6 )}, frame = 61, audible_distance_modifier = 0.3 },
+          { sound = { variations = sound_variations("__recycler__/sound/recycler/recycler-jaw-shut", 6, 0.3 )}, frame = 63, audible_distance_modifier = 0.6 },
         },
         max_sounds_per_type = 2,
         fade_in_ticks = 4,
@@ -257,7 +257,7 @@ data:extend({
       },
       collision_box = {{-0.7, -1.7}, {0.7, 1.7}},
       selection_box = {{-0.9, -1.85}, {0.9, 1.85}},
-      crafting_categories = {"recycling", "recycling-or-hand-crafting"},
+      crafting_categories = {"recycling", "hand-crafting"},
       result_inventory_size = 40,
       energy_usage = "600kW",
       crafting_speed = 1.3,
@@ -307,7 +307,8 @@ data:extend({
       icon_draw_specification = {shift = {0, -0.55}},
       icons_positioning =
       {
-        {inventory_index = defines.inventory.furnace_modules, shift = {0, 0.2}}
+        --{inventory_index = defines.inventory.furnace_modules, shift = {0, 0.2}} --doesn't exist in 2.1
+        {inventory_index = defines.inventory.crafter_modules, shift = {0, 0.2}} -- update for 2.1
       },
       allowed_effects = {"consumption", "speed", "pollution", "quality"},
       perceived_performance = { minimum = 0.0, performance_to_activity_rate = 2.0, maximum = 4 },

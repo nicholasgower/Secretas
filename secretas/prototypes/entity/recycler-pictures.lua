@@ -12,7 +12,7 @@ local function recycler_direction(key)
         animation_speed = recycler_animation_speed,
         scale = 0.5
       }),
-      util.sprite_load("__quality__/graphics/entity/recycler/recycler-"..key.."-shadow",
+      util.sprite_load("__recycler__/graphics/entity/recycler/recycler-"..key.."-shadow",
       {
         draw_as_shadow = true,
         priority = "high",
@@ -25,7 +25,7 @@ local function recycler_direction(key)
 end
 
 local function recycler_direction_frozen(key)
-  return util.sprite_load("__quality__/graphics/entity/recycler/recycler-"..key.."-frozen",
+  return util.sprite_load("__recycler__/graphics/entity/recycler/recycler-"..key.."-frozen",
   {
     priority = "high",
     scale = 0.5
@@ -57,7 +57,7 @@ local function recycler_smoke()
     render_layer = "wires",
     animation =
     {
-      filename = "__quality__/graphics/entity/recycler/recycler-smoke-outer.png",
+      filename = "__recycler__/graphics/entity/recycler/recycler-smoke-outer.png",
       frame_count = 47,
       line_length = 16,
       width = 90,
@@ -78,7 +78,7 @@ local function recycler_smoke()
     render_layer = "wires",
     animation =
     {
-      filename = "__quality__/graphics/entity/recycler/recycler-smoke-inner.png",
+      filename = "__recycler__/graphics/entity/recycler/recycler-smoke-inner.png",
       frame_count = 47,
       line_length = 16,
       width = 40,
@@ -102,7 +102,7 @@ local function recycler_flipped_smoke()
     render_layer = "wires",
     animation =
     {
-      filename = "__quality__/graphics/entity/recycler/recycler-smoke-outer.png",
+      filename = "__recycler__/graphics/entity/recycler/recycler-smoke-outer.png",
       frame_count = 47,
       line_length = 16,
       width = 90,
@@ -123,7 +123,7 @@ local function recycler_flipped_smoke()
     render_layer = "wires",
     animation =
     {
-      filename = "__quality__/graphics/entity/recycler/recycler-smoke-inner.png",
+      filename = "__recycler__/graphics/entity/recycler/recycler-smoke-inner.png",
       frame_count = 47,
       line_length = 16,
       width = 40,

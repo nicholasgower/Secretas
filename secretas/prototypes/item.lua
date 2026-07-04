@@ -214,7 +214,7 @@ data:extend(
         drop_sound = item_sounds.module_inventory_move,
         stack_size = 50,
         weight = 25 * kg,
-        effect = { quality = 0.3, speed = -0.05 },
+        effect = { quality = 0.03, speed = -0.05 },
         default_import_location = "frozeta",
     },
     {

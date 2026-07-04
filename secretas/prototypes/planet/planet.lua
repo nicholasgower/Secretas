@@ -60,7 +60,8 @@ if ((mods["dea-dia-system"] == false or mods["dea-dia-system"] == nil) or settin
             ["magnetic-field"] = 10,
             pressure = 280,
             ["solar-power"] = 1,
-            gravity = 10
+            gravity = 10,
+            ["robot-energy-usage"] = 5.5,
           },
           asteroid_spawn_influence = 1,
           asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.aquilo_secretas, 0.9), --TODO adjust
