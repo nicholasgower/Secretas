@@ -9,7 +9,7 @@ local meld = require("meld")
 data:extend(
 {
     {
-        type = "tool",
+        type = "item",
         name = "golden-science-pack",
         localised_description = {"item-description.science-pack"},
         icon = "__secretas__/graphics/icons/golden-science-pack.png",

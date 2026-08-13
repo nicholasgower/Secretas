@@ -1,5 +1,10 @@
-
-
+---------------------------------------------------------------------------------------------------
+Version: 1.0.37
+Date: 8. 13. 2026
+  Major Features:
+    - Fixed ambient-sounds.lua
+    - Science pack now an item instead of a tool
+    - Frozeta start recycling recipes now enabled as intended. (Wube broke)
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.36
 Date: 7. 28. 2026

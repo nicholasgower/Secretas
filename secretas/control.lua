@@ -44,6 +44,7 @@ script.on_event(defines.events.on_player_joined_game, function(event)
     if not frozeta_start then return end -- No soup for you if you don't start on Frozeta
 
     local player = game.players[event.player_index]
+    player.force.technologies["recycling"].research_recursive()
     player.force.technologies["planet-discovery-secretas"].research_recursive()
 	player.force.technologies["nuclear-power"].research_recursive()
     --Not sure why this last part isn't working. But whatever.
